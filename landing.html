@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+  <title>Document</title>
+</head>
+
+<body>
+  <header>
+    <nav class="bg-purple-900">
+      <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+        <div class="relative flex h-16 items-center justify-between">
+          <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+            <!-- Mobile menu button-->
+            <button type="button"
+              class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-white focus:outline-hidden focus:ring-inset"
+              aria-controls="mobile-menu" aria-expanded="false">
+              <span class="absolute -inset-0.5"></span>
+
+              <!--
+                  Icon when menu is closed.
+      
+                  Menu open: "hidden", Menu closed: "block"
+                -->
+              <svg class="block size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                aria-hidden="true" data-slot="icon">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              </svg>
+              <!--
+                  Icon when menu is open.
+      
+                  Menu open: "block", Menu closed: "hidden"
+                -->
+              <svg class="hidden size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                aria-hidden="true" data-slot="icon">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+          <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+            <div class="flex text-white">
+              <h1 class="text-2xl mb-2">Visperas<span class="font-bold ">Cofrades</span></h1>
+            </div>
+            <div class="hidden sm:ml-6 sm:block">
+              <div class="flex space-x-4">
+                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                <a href="#" class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white"
+                  aria-current="page">Dashboard</a>
+                <a href="#"
+                  class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Team</a>
+                <a href="#"
+                  class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Projects</a>
+                <a href="#"
+                  class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Calendar</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div class="sm:hidden" id="mobile-menu">
+        <div class="space-y-1 px-2 pt-2 pb-3">
+
+          <a href="#" class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white"
+            aria-current="page">Dashboard</a>
+          <a href="#"
+            class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Team</a>
+          <a href="#"
+            class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Projects</a>
+          <a href="#"
+            class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Calendar</a>
+        </div>
+      </div>
+    </nav>
+
+  </header>
+  <main class="bg-green-100">
+    <section class="container mx-auto py-12 px-6 flex items-center flex-col md:flex-row gap-40 justify-between">
+      <div class="text-center md:text-left w-3/2">
+        <p class=" text-3x1 ">Presentamos <span class="font-bold">Fitur</span> el proyecto ‘Vísperas Cofrades’, que
+          convertirá a la ciudad de Atarfe en la capital de la música de Semana Santa.<br>El evento, que cuenta con la
+          colaboración de la Diputación de Granada y su marca ‘Sabor Granada’, se desarrollará en un enorme escenario
+          que acogerá a las distintas bandas, cuyas intervenciones estarán acompañadas por videos sobre la trayectoria
+          de cada una de ellas.<br>El concierto ha sido organizado por la Cofradía de la Oración en el Huerto de Granada
+          y contará con el apoyo de otras instituciones como el Ayuntamiento de Atarfe. El evento tendrá carácter
+          benéfico y está previsto que su recaudación se destine a obras asistenciales y a apoyar a los artesanos de la
+          Semana Santa. </p>
+      </div>
+
+      <img class="w-full md:w-1/2  w-rounded-xl" src="./img/banner.jpg" alt="">
+
+
+    </section>
+    <section class="grid md:grid-cols-3 gap-6 p-5 ">
+      <div class="bg-white rounded-xl shadow-x1 p-5 text-center">
+        <img src="./img/banner.jpg" alt="">
+        <p>hhh</p>
+        <button id="openModal" class="bg-blue-500 text-white p-3 rounded-md">Abrir Modal</button>
+        <!-- Modal -->
+        <div id="modal" class="fixed inset-0  bg-opacity-50 flex justify-center items-center hidden">
+          <div class="bg-white rounded-lg shadow-lg p-6 max-w-sm w-full">
+            <h2 class="text-xl font-semibold mb-4">Este es un modal</h2>
+            <p class="mb-4">Aquí puedes poner el contenido de tu modal, como texto, imágenes, formularios, etc.</p>
+            <div class="flex justify-end">
+              <button id="closeModal" class="bg-red-500 text-white px-4 py-2 rounded-md">Cerrar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-x1 p-5 text-center">
+        <img src="./img/banner.jpg" alt="">
+        <p>hhh</p>
+        <button id="open2" class="bg-blue-500 text-white p-3 rounded-md">Abrir Modal</button>
+        <!-- Modal -->
+        <div id="modal2" class="fixed inset-0  bg-opacity-50 flex justify-center items-center hidden">
+          <div class="bg-white rounded-lg shadow-lg p-6 max-w-sm w-full">
+            <h2 class="text-xl font-semibold mb-4">Eodal</h2>
+            <p class="mb-4">Aquí puedes poner el contenido de tu modal, como texto, imágenes, formularios, etc.</p>
+            <div class="flex justify-end">
+              <button id="closeModal" class="bg-red-500 text-white px-4 py-2 rounded-md">Cerrar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-x1 p-5 text-center">
+        <img src="./img/banner.jpg" alt="">
+        <p>hhh</p>
+        <button id="open3" class="bg-blue-500 text-white p-3 rounded-md">Abrir Modal</button>
+        <!-- Modal -->
+        <div id="modal3" class="fixed inset-0  bg-opacity-50 flex justify-center items-center hidden">
+          <div class="bg-white rounded-lg shadow-lg p-6 max-w-sm w-full">
+            <h2 class="text-xl font-semibold mb-4">Este es un modal</h2>
+            <p class="mb-4">A</p>
+            <div class="flex justify-end">
+              <button id="closeModal" class="bg-red-500 text-white px-4 py-2 rounded-md">Cerrar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </section>
+  </main>
+
+  <script>
+    // Obtener los elementos
+    const openModalButton = document.getElementById("openModal");
+    const open2 = document.getElementById("open2");
+    const open3 = document.getElementById("open3");
+
+    const modal = document.getElementById("modal");
+    const modal2 = document.getElementById("modal2");
+    const modal3 = document.getElementById("modal3");
+
+
+    const closeModalButton = document.getElementById("closeModal");
+
+    // Mostrar el modal
+    openModalButton.addEventListener("click", () => {
+      modal.classList.remove("hidden");
+    });
+    open2.addEventListener("click", () => {
+      modal2.classList.remove("hidden");
+    });
+    open3.addEventListener("click", () => {
+      modal3.classList.remove("hidden");
+    });
+
+
+    // Cerrar el modal
+    closeModalButton.addEventListener("click", () => {
+      modal.classList.add("hidden");
+    });
+    closeModalButton.addEventListener("click", () => {
+      modal2.classList.add("hidden");
+    });
+    closeModalButton.addEventListener("click", () => {
+      modal3.classList.add("hidden");
+    });
+  </script>
+</body>
+
+</html>
