@@ -7,6 +7,36 @@
   <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 
   <title>Document</title>
+  <style type="text/tailwindcss">
+    @theme{
+      --animate-abrir: abrir 1s ease-in-out forwards;
+
+    @keyframes abrir {
+      100%{
+        scale: 1;
+        opacity: 1;
+      },
+      0%{
+        scale: 0;
+        opacity: 0;
+      }
+    }
+
+      --animate-cerrar: cerrar 1s ease-in-out forwards;
+      @keyframes cerrar{
+        0%{
+          scale: 1;
+          opacity: 1;
+        },
+        100%{
+          scale: 0;
+          opacity: 0;
+        }
+
+      }
+
+    }
+  </style>
 </head>
 
 <body>
@@ -97,18 +127,22 @@
 
 
     </section>
-    <section class="grid md:grid-cols-3 gap-6 p-5 ">
+    <section class=" este grid md:grid-cols-3 gap-6 p-5 ">
       <div class="bg-white rounded-xl shadow-x1 p-5 text-center">
-        <img  src="./img/rosarioC" alt="">
+        <img id="openModal" src="./img/rosarioC" alt="">
         <h2>Rosario de Cadiz</h2>
-        <button id="openModal" class="bg-blue-500 text-white p-3 rounded-md">Historia</button>
+        <!-- <button id="openModal" class="bg-blue-500 text-white p-3 rounded-md">Historia</button> -->
         <!-- Modal -->
-        <div id="modal" class="fixed inset-0  bg-opacity-50 flex justify-center items-center hidden">
+        <div id="modal" class="fixed inset-0  bg-opacity-50 flex justify-center items-center scale-0 opacity-0">
           <div class="bg-white rounded-lg shadow-lg p-6 max-w-sm w-full">
             <img src="./img/rosa.jpg" alt="">
-            <p class="mb-4">La Banda de Cornetas y Tambores Nuestra Señora del Rosario Coronada nace el 7 de mayo de 1996 bajo la advocación del Santísimo Cristo de la Humildad y Paciencia de Cádiz con el particular estilo de la policía armada.
+            <p class="mb-4">La Banda de Cornetas y Tambores Nuestra Señora del Rosario Coronada nace el 7 de mayo de
+              1996 bajo la advocación del Santísimo Cristo de la Humildad y Paciencia de Cádiz con el particular estilo
+              de la policía armada.
 
-              Rosario de Cádiz comenzaba en sus inicios con unos setenta componentes (con edades comprendidas entre 13 y 30 años), cabe destacar que en aquella época, era una cifra de componentes inicial bastante amplia, contando con un privilegiado y emblemático lugar de ensayo como son las Puertas de Tierra..</p>
+              Rosario de Cádiz comenzaba en sus inicios con unos setenta componentes (con edades comprendidas entre 13 y
+              30 años), cabe destacar que en aquella época, era una cifra de componentes inicial bastante amplia,
+              contando con un privilegiado y emblemático lugar de ensayo como son las Puertas de Tierra..</p>
             <div class="flex justify-end">
               <button id="closeModal" class="bg-red-500 text-white px-4 py-2 rounded-md">Cerrar</button>
             </div>
@@ -117,14 +151,19 @@
       </div>
 
       <div class="bg-white rounded-xl shadow-x1 p-5 text-center">
-        <img src="./img/cigarreras.jpg" alt="">
+        <img id="open2" src="./img/cigarreras.jpg" alt="">
         <h2>Las Cigarreras</h2>
-        <button id="open2" class="bg-blue-500 text-white p-3 rounded-md">Historia</button>
+        <!-- <button id="open2" class="bg-blue-500 text-white p-3 rounded-md">Historia</button> -->
         <!-- Modal -->
-        <div id="modal2" class="fixed inset-0  bg-opacity-50 flex justify-center items-center hidden">
+        <div id="modal2" class="fixed inset-0  bg-opacity-50 flex justify-center items-center  scale-0 opacity-0">
           <div class="bg-white rounded-lg shadow-lg p-6 max-w-sm w-full">
             <img src="./img/bciga.jpg" alt="">
-            <p class="mb-4">Es en el transcurso de 1979 cuando en la Hermandad de Las Cigarreras surge el germen de la que hoy día es su banda más emblemática: La banda de cornetas y tambores Nuestra Señora de la Victoria “Las Cigarreras”. Como ya es sabido por todos, en sus comienzos lleva un estilo mixto, que no era otra cosa que un híbrido entre los ya conocidos de la Policía Armada y de la Guardia Civil, donde se interpretaban marchas indistintamente de ambas formaciones, y cuya instrumentación estaba compuesta por cornetas y tambores, trompetas, cajas y platos, incorporándose un poco más adelante el trombón.</p>
+            <p class="mb-4">Es en el transcurso de 1979 cuando en la Hermandad de Las Cigarreras surge el germen de la
+              que hoy día es su banda más emblemática: La banda de cornetas y tambores Nuestra Señora de la Victoria
+              “Las Cigarreras”. Como ya es sabido por todos, en sus comienzos lleva un estilo mixto, que no era otra
+              cosa que un híbrido entre los ya conocidos de la Policía Armada y de la Guardia Civil, donde se
+              interpretaban marchas indistintamente de ambas formaciones, y cuya instrumentación estaba compuesta por
+              cornetas y tambores, trompetas, cajas y platos, incorporándose un poco más adelante el trombón.</p>
             <div class="flex justify-end">
               <button id="closeModal2" class="bg-red-500 text-white px-4 py-2 rounded-md">Cerrar</button>
             </div>
@@ -133,17 +172,24 @@
       </div>
 
       <div class="bg-white rounded-xl shadow-x1 p-5 text-center">
-        <img src="./img/sanisi.jpg" alt="">
+        <img id="open3" src="./img/sanisi.jpg" alt="">
         <H2>San Isidro Armilla</H2>
-        <button id="open3" class="bg-blue-500 text-white p-3 rounded-md">Historia</button>
+        <!-- <button id="open3" class="bg-blue-500 text-white p-3 rounded-md">Historia</button> -->
         <!-- Modal -->
-        <div id="modal3" class="fixed inset-0  bg-opacity-50 flex justify-center items-center hidden">
+        <div id="modal3" class="fixed inset-0  bg-opacity-50 flex justify-center items-center  scale-0 opacity-0">
           <div class="bg-white rounded-lg shadow-lg p-6 max-w-sm w-full">
             <img src="./img/bsanIS.jpg" alt="">
-            <p class="mb-4">La Asociación Musical San Isidro de Armilla (AMSIA) fue fundada en el año 1985, siendo su primer presidente D. Manuel Jiménez y estando dirigida por D. José María Sola Formada por 15 componentes todos ellos vecinos de Armilla.
-              En 1991 se produjo el cambio de Director, tomando posesión D.José Melchor Perelló Lavilla, que se encontró a una Asociación fragmentada por diversas razones y con un número muy bajo de componentes. Afortunadamente los componentes que formaban aquella plantilla eran jóvenes comprometidos y responsables y supieron, con una gran dosis de ilusión superar las adversidades, adaptarse al nuevo estilo de escuela y banda y trabajar a diario para ir formándose como músicos.
-              La juventud del Director hizo posible que se creara un clima de amistad y la buena relación existente entre todos los componentes hizo que fuese el punto de apoyo para mover hacia adelante este proyecto.
-              </p>
+            <p class="mb-4">La Asociación Musical San Isidro de Armilla (AMSIA) fue fundada en el año 1985, siendo su
+              primer presidente D. Manuel Jiménez y estando dirigida por D. José María Sola Formada por 15 componentes
+              todos ellos vecinos de Armilla.
+              En 1991 se produjo el cambio de Director, tomando posesión D.José Melchor Perelló Lavilla, que se encontró
+              a una Asociación fragmentada por diversas razones y con un número muy bajo de componentes. Afortunadamente
+              los componentes que formaban aquella plantilla eran jóvenes comprometidos y responsables y supieron, con
+              una gran dosis de ilusión superar las adversidades, adaptarse al nuevo estilo de escuela y banda y
+              trabajar a diario para ir formándose como músicos.
+              La juventud del Director hizo posible que se creara un clima de amistad y la buena relación existente
+              entre todos los componentes hizo que fuese el punto de apoyo para mover hacia adelante este proyecto.
+            </p>
             <div class="flex justify-end">
               <button id="closeModal3" class="bg-red-500 text-white px-4 py-2 rounded-md">Cerrar</button>
             </div>
@@ -152,16 +198,20 @@
       </div>
 
       <div class="bg-white rounded-xl shadow-x1 p-5 text-center">
-        <img src="./img/pasiondLina" alt="">
+        <img id="open4" src="./img/pasiondLina" alt="">
         <h2>Pasión de Linares</h2>
-        <button id="open4" class="bg-blue-500 text-white p-3 rounded-md">Historia</button>
+        <!-- <button id="open4" class="bg-blue-500 text-white p-3 rounded-md">Historia</button> -->
         <!-- Modal -->
-        <div id="modal4" class="fixed inset-0  bg-opacity-50 flex justify-center items-center hidden">
+        <div id="modal4" class="fixed inset-0  bg-opacity-50 flex justify-center items-center  scale-0 opacity-0">
           <div class="bg-white rounded-lg shadow-lg p-6 max-w-sm w-full">
             <img src="./img/cornetaspasion.jpg" alt="">
             <p class="mb-4">
-              La Agrupación Musical «Ntro. P. Jesús de la Pasión «, fue fundada el 26 de octubre de 1996. Su presentación ante el público tuvo lugar en su Concierto de Presentación celebrado el 28 de febrero de 1997 en el Parque Mariana Pineda de Linares, siendo apadrinada por la Agrupación Musical «Ntro. P. Jesús de la Redención » de Córdoba, con quienes les une una estrecha relación.
-              Son un total de 80 componentes que, bajo la dirección de Juan Luis López Hernández, van dejando en todas sus actuaciones la impronta de su calidad musical.</p>
+              La Agrupación Musical «Ntro. P. Jesús de la Pasión «, fue fundada el 26 de octubre de 1996. Su
+              presentación ante el público tuvo lugar en su Concierto de Presentación celebrado el 28 de febrero de 1997
+              en el Parque Mariana Pineda de Linares, siendo apadrinada por la Agrupación Musical «Ntro. P. Jesús de la
+              Redención » de Córdoba, con quienes les une una estrecha relación.
+              Son un total de 80 componentes que, bajo la dirección de Juan Luis López Hernández, van dejando en todas
+              sus actuaciones la impronta de su calidad musical.</p>
             <div class="flex justify-end">
               <button id="closeModal4" class="bg-red-500 text-white px-4 py-2 rounded-md">Cerrar</button>
             </div>
@@ -170,14 +220,17 @@
       </div>
 
       <div class="bg-white rounded-xl shadow-x1 p-5 text-center">
-        <img src="./img/despojado.jfif" alt="">
+        <img id="open5" src="./img/despojado.jfif" alt="">
         <h2>Despojado Granada</h2>
-        <button id="open5" class="bg-blue-500 text-white p-3 rounded-md">Historia</button>
+        <!-- <button id="open5" class="bg-blue-500 text-white p-3 rounded-md">Historia</button> -->
         <!-- Modal -->
-        <div id="modal5" class="fixed inset-0  bg-opacity-50 flex justify-center items-center hidden">
+        <div id="modal5" class="fixed inset-0  bg-opacity-50 flex justify-center items-center  scale-0 opacity-0">
           <div class="bg-white rounded-lg shadow-lg p-6 max-w-sm w-full">
             <img src="./img/despo.jpg" alt="">
-            <p class="mb-4">La historia de esta formación comienza en el año 1993, cuando un grupo de compañeros y hermanos de la Hermandad de Jesús Despojado de sus Vestiduras decidieron formar una banda de cornetas y tambores, que poco a poco se ha convertido en una de las formaciones más reconocidas en el panorama musical granadino.</p>
+            <p class="mb-4">La historia de esta formación comienza en el año 1993, cuando un grupo de compañeros y
+              hermanos de la Hermandad de Jesús Despojado de sus Vestiduras decidieron formar una banda de cornetas y
+              tambores, que poco a poco se ha convertido en una de las formaciones más reconocidas en el panorama
+              musical granadino.</p>
             <div class="flex justify-end">
               <button id="closeModal5" class="bg-red-500 text-white px-4 py-2 rounded-md">Cerrar</button>
             </div>
@@ -186,14 +239,17 @@
       </div>
 
       <div class="bg-white rounded-xl shadow-x1 p-5 text-center">
-        <img src="./img/granpoder.jfif" alt="">
+        <img id="open6" src="./img/granpoder.jfif" alt="">
         <h2>Gran Poder Granada</h2>
-        <button id="open6" class="bg-blue-500 text-white p-3 rounded-md">Historia</button>
+        <!-- <button id="open6" class="bg-blue-500 text-white p-3 rounded-md">Historia</button> -->
         <!-- Modal -->
-        <div id="modal6" class="fixed inset-0  bg-opacity-50 flex justify-center items-center hidden">
+        <div id="modal6" class="fixed inset-0  bg-opacity-50 flex justify-center items-center  scale-0 opacity-0">
           <div class="bg-white rounded-lg shadow-lg p-6 max-w-sm w-full">
             <img src="./img/granP.PNG" alt="">
-            <p class="mb-4">La formación musical se fundó en 1994,  está formada por alrededor de cien componentes.El año 2017 estrenaron nuevos uniformes, presentados en un concierto extraordinario el día 27, de enero. En su repertorio tienen varias marchas de composición propia, otras de las llamadas clásicas y otras de diferentes bandas destacando las de Tres Caídas de Triana.</p>
+            <p class="mb-4">La formación musical se fundó en 1994, está formada por alrededor de cien componentes.El año
+              2017 estrenaron nuevos uniformes, presentados en un concierto extraordinario el día 27, de enero. En su
+              repertorio tienen varias marchas de composición propia, otras de las llamadas clásicas y otras de
+              diferentes bandas destacando las de Tres Caídas de Triana.</p>
             <div class="flex justify-end">
               <button id="closeModal6" class="bg-red-500 text-white px-4 py-2 rounded-md">Cerrar</button>
             </div>
@@ -202,19 +258,21 @@
       </div>
 
       <div class="bg-white rounded-xl shadow-x1 p-5 text-center">
-        <img src="./img/estrella.jfif" alt="">
+        <img id="open7" src="./img/estrella.jfif" alt="">
         <h2>Estrella Granada</h2>
-        <button id="open7" class="bg-blue-500 text-white p-3 rounded-md">Historia</button>
+        <!-- <button id="open7" class="bg-blue-500 text-white p-3 rounded-md">Historia</button> -->
         <!-- Modal -->
-        <div id="modal7" class="fixed inset-0  bg-opacity-50 flex justify-center items-center hidden">
+        <div id="modal7" class="fixed inset-0  bg-opacity-50 flex justify-center items-center  scale-0 opacity-0">
           <div class="bg-white rounded-lg shadow-lg p-6 max-w-sm w-full">
             <img src="./img/estre.jpg" alt="">
             <p class="mb-4">En septiembre del año 1979 se fundaba la llamada por aquel entonces “Banda de la
-              Estrella”, bajo el amparo de la Cofradía de Nazarenos de Nuestro Padre Jesús de la Pasión y María Santísima de la Estrella, en el popular barrio granadino del Albayzín. Un grupo de muchachos formaron
+              Estrella”, bajo el amparo de la Cofradía de Nazarenos de Nuestro Padre Jesús de la Pasión y María
+              Santísima de la Estrella, en el popular barrio granadino del Albayzín. Un grupo de muchachos formaron
               la banda de cornetas y tambores de “La Estrella”, (basada principalmente en toques de estilo militar).
-              
+
               La polifonía de
-              las marchas era muy limitada, ya que sólo se disponían de cornetas rasas y alguna de llave, siendo director musical de la misma D. Joaquín Tesifón Rojas, (conocido en el ambiente musical cofrade como
+              las marchas era muy limitada, ya que sólo se disponían de cornetas rasas y alguna de llave, siendo
+              director musical de la misma D. Joaquín Tesifón Rojas, (conocido en el ambiente musical cofrade como
               el “Maestro Quini”).</p>
             <div class="flex justify-end">
               <button id="closeModal7" class="bg-red-500 text-white px-4 py-2 rounded-md">Cerrar</button>
@@ -224,14 +282,17 @@
       </div>
 
       <div class="bg-white rounded-xl shadow-x1 p-5 text-center">
-        <img src="./img/esperanzaMalaga.jpg" alt="">
+        <img id="open8" src="./img/esperanzaMalaga.jpg" alt="">
         <h2>Esperanza Malaga</h2>
-        <button id="open8" class="bg-blue-500 text-white p-3 rounded-md">Historia</button>
+        <!-- <button id="open8" class="bg-blue-500 text-white p-3 rounded-md">Historia</button> -->
         <!-- Modal -->
-        <div id="modal8" class="fixed inset-0  bg-opacity-50 flex justify-center items-center hidden">
+        <div id="modal8" class="fixed inset-0  bg-opacity-50 flex justify-center items-center  scale-0 opacity-0">
           <div class="bg-white rounded-lg shadow-lg p-6 max-w-sm w-full">
             <img src="./img/espe.jpg" alt="">
-            <p class="mb-4">El origen de la Archicofradía del Dulce Nombre de Jesús está ligado al asentamiento en Málaga de la Orden de Predicadores (Dominicos). Dicho asentamiento se produce sólo 7 años después de la Reconquista de la ciudad por los Reyes Católicos en 1487, y se materializa con la fundación del Convento de Santo Domingo y San Carlos en 1494.</p>
+            <p class="mb-4">El origen de la Archicofradía del Dulce Nombre de Jesús está ligado al asentamiento en
+              Málaga de la Orden de Predicadores (Dominicos). Dicho asentamiento se produce sólo 7 años después de la
+              Reconquista de la ciudad por los Reyes Católicos en 1487, y se materializa con la fundación del Convento
+              de Santo Domingo y San Carlos en 1494.</p>
             <div class="flex justify-end">
               <button id="closeModal8" class="bg-red-500 text-white px-4 py-2 rounded-md">Cerrar</button>
             </div>
@@ -281,55 +342,201 @@
 
     // Mostrar el modal
     openModalButton.addEventListener("click", () => {
-      modal.classList.remove("hidden");
+      modal.classList.add("animate-abrir");
+      modal.classList.remove("animate-cerrar");
+      document.querySelector("body").style.overflowY="hidden";
+      document.querySelectorAll(".este > div > div").forEach(element =>{
+        if(element.classList.contains('animate-abrir')){
+          element.style.zIndex="999"
+        }else{
+          element.parentElement.style.filter="blur(10px)";
+        }
+      })
+
     });
     open2.addEventListener("click", () => {
-      modal2.classList.remove("hidden");
+      modal2.classList.add("animate-abrir");
+      modal2.classList.remove("animate-cerrar");
+      document.querySelector("body").style.overflowY="hidden";
+      document.querySelectorAll(".este > div > div").forEach(element =>{
+        if(element.classList.contains('animate-abrir')){
+          element.style.zIndex="999"
+        }else{
+          element.parentElement.style.filter="blur(10px)";
+        }
+      })
     });
     open3.addEventListener("click", () => {
-      modal3.classList.remove("hidden");
+      modal3.classList.add("animate-abrir");
+      modal3.classList.remove("animate-cerrar");
+      document.querySelector("body").style.overflowY="hidden";
+      document.querySelectorAll(".este > div > div").forEach(element =>{
+        if(element.classList.contains('animate-abrir')){
+          element.style.zIndex="999"
+        }else{
+          element.parentElement.style.filter="blur(10px)";
+        }
+      })
     });
     open4.addEventListener("click", () => {
-      modal4.classList.remove("hidden");
+      modal4.classList.add("animate-abrir");
+      modal4.classList.remove("animate-cerrar");
+      document.querySelector("body").style.overflowY="hidden";
+      document.querySelectorAll(".este > div > div").forEach(element =>{
+        if(element.classList.contains('animate-abrir')){
+          element.style.zIndex="999"
+        }else{
+          element.parentElement.style.filter="blur(10px)";
+        }
+      })
     });
     open5.addEventListener("click", () => {
-      modal5.classList.remove("hidden");
+      modal5.classList.add("animate-abrir");
+      modal5.classList.remove("animate-cerrar");
+      document.querySelector("body").style.overflowY="hidden";
+      document.querySelectorAll(".este > div > div").forEach(element =>{
+        if(element.classList.contains('animate-abrir')){
+          element.style.zIndex="999"
+        }else{
+          element.parentElement.style.filter="blur(10px)";
+        }
+      })
     });
     open6.addEventListener("click", () => {
-      modal6.classList.remove("hidden");
+      modal6.classList.add("animate-abrir");
+      modal6.classList.remove("animate-cerrar");
+      document.querySelector("body").style.overflowY="hidden";
+      document.querySelectorAll(".este > div > div").forEach(element =>{
+        if(element.classList.contains('animate-abrir')){
+          element.style.zIndex="999"
+        }else{
+          element.parentElement.style.filter="blur(10px)";
+        }
+      })
     });
     open7.addEventListener("click", () => {
-      modal7.classList.remove("hidden");
+      modal7.classList.add("animate-abrir");
+      modal7.classList.remove("animate-cerrar");
+      document.querySelector("body").style.overflowY="hidden";
+      document.querySelectorAll(".este > div > div").forEach(element =>{
+        if(element.classList.contains('animate-abrir')){
+          element.style.zIndex="999"
+        }else{
+          element.parentElement.style.filter="blur(10px)";
+        }
+      })
     });
     open8.addEventListener("click", () => {
-      modal8.classList.remove("hidden");
+      modal8.classList.add("animate-abrir");
+      modal8.classList.remove("animate-cerrar");
+      document.querySelector("body").style.overflowY="hidden";
+      document.querySelectorAll(".este > div > div").forEach(element =>{
+        if(element.classList.contains('animate-abrir')){
+          element.style.zIndex="999"
+        }else{
+          element.parentElement.style.filter="blur(10px)";
+        }
+      })
     });
 
 
     // Cerrar el modal
     closeModalButton.addEventListener("click", () => {
-      modal.classList.add("hidden");
+      // modal.classList.add("hidden");
+      modal.classList.remove("animate-abrir");
+      modal.classList.add("animate-cerrar");
+      document.querySelector("body").style.overflowY="auto";
+      document.querySelectorAll(".este > div > div").forEach(element =>{
+        if(element.classList.contains('animate-cerrar')){
+          element.style.zIndex="999";
+        }else{
+          element.parentElement.style.filter="blur(0px)";
+        }
+      })
     });
     closeModalButton2.addEventListener("click", () => {
-      modal2.classList.add("hidden");
+      modal2.classList.remove("animate-abrir");
+      modal2.classList.add("animate-cerrar");
+      document.querySelector("body").style.overflowY="auto";
+      document.querySelectorAll(".este > div > div").forEach(element =>{
+        if(element.classList.contains('animate-cerrar')){
+          element.style.zIndex="999";
+        }else{
+          element.parentElement.style.filter="blur(0px)";
+        }
+      })
     });
     closeModalButton3.addEventListener("click", () => {
-      modal3.classList.add("hidden");
+      modal3.classList.remove("animate-abrir");
+      modal3.classList.add("animate-cerrar");
+      document.querySelector("body").style.overflowY="auto";
+      document.querySelectorAll(".este > div > div").forEach(element =>{
+        if(element.classList.contains('animate-cerrar')){
+          element.style.zIndex="999";
+        }else{
+          element.parentElement.style.filter="blur(0px)";
+        }
+      })
     });
     closeModalButton4.addEventListener("click", () => {
-      modal4.classList.add("hidden");
+      modal4.classList.remove("animate-abrir");
+      modal4.classList.add("animate-cerrar");
+      document.querySelector("body").style.overflowY="auto";
+      document.querySelectorAll(".este > div > div").forEach(element =>{
+        if(element.classList.contains('animate-cerrar')){
+          element.style.zIndex="999";
+        }else{
+          element.parentElement.style.filter="blur(0px)";
+        }
+      })
     });
     closeModalButton5.addEventListener("click", () => {
-      modal5.classList.add("hidden");
+      modal5.classList.remove("animate-abrir");
+      modal5.classList.add("animate-cerrar");
+      document.querySelector("body").style.overflowY="auto";
+      document.querySelectorAll(".este > div > div").forEach(element =>{
+        if(element.classList.contains('animate-cerrar')){
+          element.style.zIndex="999";
+        }else{
+          element.parentElement.style.filter="blur(0px)";
+        }
+      })
     });
     closeModalButton6.addEventListener("click", () => {
-      modal6.classList.add("hidden");
+      modal6.classList.remove("animate-abrir");
+      modal6.classList.add("animate-cerrar");
+      document.querySelector("body").style.overflowY="auto";
+      document.querySelectorAll(".este > div > div").forEach(element =>{
+        if(element.classList.contains('animate-cerrar')){
+          element.style.zIndex="999";
+        }else{
+          element.parentElement.style.filter="blur(0px)";
+        }
+      })
     });
     closeModalButton7.addEventListener("click", () => {
-      modal7.classList.add("hidden");
+      modal7.classList.remove("animate-abrir");
+      modal7.classList.add("animate-cerrar");
+      document.querySelector("body").style.overflowY="auto";
+      document.querySelectorAll(".este > div > div").forEach(element =>{
+        if(element.classList.contains('animate-cerrar')){
+          element.style.zIndex="999";
+        }else{
+          element.parentElement.style.filter="blur(0px)";
+        }
+      })
     });
     closeModalButton8.addEventListener("click", () => {
-      modal8.classList.add("hidden");
+      modal8.classList.remove("animate-abrir");
+      modal8.classList.add("animate-cerrar");
+      document.querySelector("body").style.overflowY="auto";
+      document.querySelectorAll(".este > div > div").forEach(element =>{
+        if(element.classList.contains('animate-cerrar')){
+          element.style.zIndex="999";
+        }else{
+          element.parentElement.style.filter="blur(0px)";
+        }
+      })
     });
   </script>
 </body>
