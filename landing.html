@@ -5,9 +5,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
   <title>Document</title>
   <style type="text/tailwindcss">
+    .lineaEstilo {
+            background-color: rgba(59, 130, 246, 0.5);
+            border-radius: 50%;
+            position: absolute;
+            inset: 0;
+        }
     @theme{
       --animate-abrir: abrir 1s ease-in-out forwards;
 
@@ -127,174 +135,198 @@
 
 
     </section>
-    <section class=" este grid md:grid-cols-3 gap-6 p-5 ">
-      <div class="bg-white rounded-xl shadow-x1 p-5 text-center">
-        <img id="openModal" src="./img/rosarioC" alt="">
-        <h2>Rosario de Cadiz</h2>
-        <!-- <button id="openModal" class="bg-blue-500 text-white p-3 rounded-md">Historia</button> -->
-        <!-- Modal -->
-        <div id="modal" class="fixed inset-0  bg-opacity-50 flex justify-center items-center scale-0 opacity-0">
-          <div class="bg-white rounded-lg shadow-lg p-6 max-w-sm w-full">
-            <img src="./img/rosa.jpg" alt="">
-            <p class="mb-4">La Banda de Cornetas y Tambores Nuestra Señora del Rosario Coronada nace el 7 de mayo de
-              1996 bajo la advocación del Santísimo Cristo de la Humildad y Paciencia de Cádiz con el particular estilo
-              de la policía armada.
+    <section class="text-center" >
+      <h2 class="text-2xl">Bandas que tocan en el evento</h2>
+      <p>Haz clic sobre ellas para saber un poquito de su historia</p>
+      <div class=" este grid md:grid-cols-3 gap-6 p-5 ">
 
-              Rosario de Cádiz comenzaba en sus inicios con unos setenta componentes (con edades comprendidas entre 13 y
-              30 años), cabe destacar que en aquella época, era una cifra de componentes inicial bastante amplia,
-              contando con un privilegiado y emblemático lugar de ensayo como son las Puertas de Tierra..</p>
-            <div class="flex justify-end">
-              <button id="closeModal" class="bg-red-500 text-white px-4 py-2 rounded-md">Cerrar</button>
+        <div class=" rounded-xl shadow-x1 p-5 text-center place-items-center">
+          <img id="openModal" class="w-32 h-32 rounded-full " src="./img/rosarioC" alt="">
+          <h2 >Rosario de Cadiz</h2>
+          <!-- <button id="openModal" class="bg-blue-500 text-white p-3 rounded-md">Historia</button> -->
+          <!-- Modal -->
+          <div id="modal" class="fixed inset-0  bg-opacity-50 flex justify-center items-center scale-0 opacity-0">
+            <div class="bg-white rounded-lg shadow-lg p-6 max-w-sm w-full">
+              <img src="./img/rosa.jpg" alt="">
+              <p class="mb-4">La Banda de Cornetas y Tambores Nuestra Señora del Rosario Coronada nace el 7 de mayo de
+                1996 bajo la advocación del Santísimo Cristo de la Humildad y Paciencia de Cádiz con el particular estilo
+                de la policía armada.
+  
+                Rosario de Cádiz comenzaba en sus inicios con unos setenta componentes (con edades comprendidas entre 13 y
+                30 años), cabe destacar que en aquella época, era una cifra de componentes inicial bastante amplia,
+                contando con un privilegiado y emblemático lugar de ensayo como son las Puertas de Tierra..</p>
+              <div class="flex justify-end">
+                <button id="closeModal" class="bg-red-500 text-white px-4 py-2 rounded-md">Cerrar</button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-
-      <div class="bg-white rounded-xl shadow-x1 p-5 text-center">
-        <img id="open2" src="./img/cigarreras.jpg" alt="">
-        <h2>Las Cigarreras</h2>
-        <!-- <button id="open2" class="bg-blue-500 text-white p-3 rounded-md">Historia</button> -->
-        <!-- Modal -->
-        <div id="modal2" class="fixed inset-0  bg-opacity-50 flex justify-center items-center  scale-0 opacity-0">
-          <div class="bg-white rounded-lg shadow-lg p-6 max-w-sm w-full">
-            <img src="./img/bciga.jpg" alt="">
-            <p class="mb-4">Es en el transcurso de 1979 cuando en la Hermandad de Las Cigarreras surge el germen de la
-              que hoy día es su banda más emblemática: La banda de cornetas y tambores Nuestra Señora de la Victoria
-              “Las Cigarreras”. Como ya es sabido por todos, en sus comienzos lleva un estilo mixto, que no era otra
-              cosa que un híbrido entre los ya conocidos de la Policía Armada y de la Guardia Civil, donde se
-              interpretaban marchas indistintamente de ambas formaciones, y cuya instrumentación estaba compuesta por
-              cornetas y tambores, trompetas, cajas y platos, incorporándose un poco más adelante el trombón.</p>
-            <div class="flex justify-end">
-              <button id="closeModal2" class="bg-red-500 text-white px-4 py-2 rounded-md">Cerrar</button>
+  
+        <div class="rounded-xl shadow-x1 p-5 text-center place-items-center">
+          <img id="open2"  class="w-32 h-32 rounded-full" src="./img/cigarreras.jpg" alt="">
+          <h2>Las Cigarreras</h2>
+          <!-- <button id="open2" class="bg-blue-500 text-white p-3 rounded-md">Historia</button> -->
+          <!-- Modal -->
+          <div id="modal2" class="fixed inset-0  bg-opacity-50 flex justify-center items-center  scale-0 opacity-0">
+            <div class="bg-white rounded-lg shadow-lg p-6 max-w-sm w-full">
+              <img src="./img/bciga.jpg" alt="">
+              <p class="mb-4">Es en el transcurso de 1979 cuando en la Hermandad de Las Cigarreras surge el germen de la
+                que hoy día es su banda más emblemática: La banda de cornetas y tambores Nuestra Señora de la Victoria
+                “Las Cigarreras”. Como ya es sabido por todos, en sus comienzos lleva un estilo mixto, que no era otra
+                cosa que un híbrido entre los ya conocidos de la Policía Armada y de la Guardia Civil, donde se
+                interpretaban marchas indistintamente de ambas formaciones, y cuya instrumentación estaba compuesta por
+                cornetas y tambores, trompetas, cajas y platos, incorporándose un poco más adelante el trombón.</p>
+              <div class="flex justify-end">
+                <button id="closeModal2" class="bg-red-500 text-white px-4 py-2 rounded-md">Cerrar</button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-
-      <div class="bg-white rounded-xl shadow-x1 p-5 text-center">
-        <img id="open3" src="./img/sanisi.jpg" alt="">
-        <H2>San Isidro Armilla</H2>
-        <!-- <button id="open3" class="bg-blue-500 text-white p-3 rounded-md">Historia</button> -->
-        <!-- Modal -->
-        <div id="modal3" class="fixed inset-0  bg-opacity-50 flex justify-center items-center  scale-0 opacity-0">
-          <div class="bg-white rounded-lg shadow-lg p-6 max-w-sm w-full">
-            <img src="./img/bsanIS.jpg" alt="">
-            <p class="mb-4">La Asociación Musical San Isidro de Armilla (AMSIA) fue fundada en el año 1985, siendo su
-              primer presidente D. Manuel Jiménez y estando dirigida por D. José María Sola Formada por 15 componentes
-              todos ellos vecinos de Armilla.
-              En 1991 se produjo el cambio de Director, tomando posesión D.José Melchor Perelló Lavilla, que se encontró
-              a una Asociación fragmentada por diversas razones y con un número muy bajo de componentes. Afortunadamente
-              los componentes que formaban aquella plantilla eran jóvenes comprometidos y responsables y supieron, con
-              una gran dosis de ilusión superar las adversidades, adaptarse al nuevo estilo de escuela y banda y
-              trabajar a diario para ir formándose como músicos.
-              La juventud del Director hizo posible que se creara un clima de amistad y la buena relación existente
-              entre todos los componentes hizo que fuese el punto de apoyo para mover hacia adelante este proyecto.
-            </p>
-            <div class="flex justify-end">
-              <button id="closeModal3" class="bg-red-500 text-white px-4 py-2 rounded-md">Cerrar</button>
+  
+        <div class="rounded-xl shadow-x1 p-5 text-center place-items-center">
+          <img id="open3" class="w-32 h-32 rounded-full" src="./img/sanisi.jpg" alt="">
+          <H2>San Isidro Armilla</H2>
+          <!-- <button id="open3" class="bg-blue-500 text-white p-3 rounded-md">Historia</button> -->
+          <!-- Modal -->
+          <div id="modal3" class="fixed inset-0  bg-opacity-50 flex justify-center items-center  scale-0 opacity-0">
+            <div class="bg-white rounded-lg shadow-lg p-6 max-w-sm w-full">
+              <img src="./img/bsanIS.jpg" alt="">
+              <p class="mb-4">La Asociación Musical San Isidro de Armilla (AMSIA) fue fundada en el año 1985, siendo su
+                primer presidente D. Manuel Jiménez y estando dirigida por D. José María Sola Formada por 15 componentes
+                todos ellos vecinos de Armilla.
+                En 1991 se produjo el cambio de Director, tomando posesión D.José Melchor Perelló Lavilla, que se encontró
+                a una Asociación fragmentada por diversas razones y con un número muy bajo de componentes. Afortunadamente
+                los componentes que formaban aquella plantilla eran jóvenes comprometidos y responsables y supieron, con
+                una gran dosis de ilusión superar las adversidades, adaptarse al nuevo estilo de escuela y banda y
+                trabajar a diario para ir formándose como músicos.
+                La juventud del Director hizo posible que se creara un clima de amistad y la buena relación existente
+                entre todos los componentes hizo que fuese el punto de apoyo para mover hacia adelante este proyecto.
+              </p>
+              <div class="flex justify-end">
+                <button id="closeModal3" class="bg-red-500 text-white px-4 py-2 rounded-md">Cerrar</button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="bg-white rounded-xl shadow-x1 p-5 text-center">
-        <img id="open4" src="./img/pasiondLina" alt="">
-        <h2>Pasión de Linares</h2>
-        <!-- <button id="open4" class="bg-blue-500 text-white p-3 rounded-md">Historia</button> -->
-        <!-- Modal -->
-        <div id="modal4" class="fixed inset-0  bg-opacity-50 flex justify-center items-center  scale-0 opacity-0">
-          <div class="bg-white rounded-lg shadow-lg p-6 max-w-sm w-full">
-            <img src="./img/cornetaspasion.jpg" alt="">
-            <p class="mb-4">
-              La Agrupación Musical «Ntro. P. Jesús de la Pasión «, fue fundada el 26 de octubre de 1996. Su
-              presentación ante el público tuvo lugar en su Concierto de Presentación celebrado el 28 de febrero de 1997
-              en el Parque Mariana Pineda de Linares, siendo apadrinada por la Agrupación Musical «Ntro. P. Jesús de la
-              Redención » de Córdoba, con quienes les une una estrecha relación.
-              Son un total de 80 componentes que, bajo la dirección de Juan Luis López Hernández, van dejando en todas
-              sus actuaciones la impronta de su calidad musical.</p>
-            <div class="flex justify-end">
-              <button id="closeModal4" class="bg-red-500 text-white px-4 py-2 rounded-md">Cerrar</button>
+        <div class="rounded-xl shadow-x1 p-5 text-center place-items-center">
+          <img id="open9" class="w-32 h-32 rounded-full" src="./img/daniB.jpeg" alt="">
+          <H2>Dani de Baza</H2>
+          <!-- <button id="open3" class="bg-blue-500 text-white p-3 rounded-md">Historia</button> -->
+          <!-- Modal -->
+          <div id="modal9" class="fixed inset-0  bg-opacity-50 flex justify-center items-center  scale-0 opacity-0">
+            <div class="bg-white rounded-lg shadow-lg p-6 max-w-sm w-full">
+              <img src="./img/dniB.jpeg" alt="">
+              <p class="mb-4">Nacido en Baza, Granada en 1982, Daniel Jiménez Castro, conocido internacionalmente como Dani de Baza, ha estado predestinado desde niño gracias a su padre, Antonio Jiménez Dengra, a formar parte de la música y del mundo cofrade bastetano y andaluz.
+
+                Formado desde muy corta edad en la desaparecida Banda de la Esperanza de su ciudad natal, Dani de Baza comenzó a destacar como instrumentista desde sus inicios. La trayectoria artística de Dani de Baza no ha cesado, recorriendo desde 1996 las mejores bandas de Andalucía entre las que destacan Presentación al Pueblo de Dos Hermanas en Sevilla, Tres Caídas de Triana en Sevilla y por último Tres Caídas del Realejo en Granada.
+              </p>
+              <div class="flex justify-end">
+                <button id="closeModal9" class="bg-red-500 text-white px-4 py-2 rounded-md">Cerrar</button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-
-      <div class="bg-white rounded-xl shadow-x1 p-5 text-center">
-        <img id="open5" src="./img/despojado.jfif" alt="">
-        <h2>Despojado Granada</h2>
-        <!-- <button id="open5" class="bg-blue-500 text-white p-3 rounded-md">Historia</button> -->
-        <!-- Modal -->
-        <div id="modal5" class="fixed inset-0  bg-opacity-50 flex justify-center items-center  scale-0 opacity-0">
-          <div class="bg-white rounded-lg shadow-lg p-6 max-w-sm w-full">
-            <img src="./img/despo.jpg" alt="">
-            <p class="mb-4">La historia de esta formación comienza en el año 1993, cuando un grupo de compañeros y
-              hermanos de la Hermandad de Jesús Despojado de sus Vestiduras decidieron formar una banda de cornetas y
-              tambores, que poco a poco se ha convertido en una de las formaciones más reconocidas en el panorama
-              musical granadino.</p>
-            <div class="flex justify-end">
-              <button id="closeModal5" class="bg-red-500 text-white px-4 py-2 rounded-md">Cerrar</button>
+  
+        <div class="rounded-xl shadow-x1 p-5 text-center place-items-center">
+          <img id="open4"  class="w-32 h-32 rounded-full" src="./img/pasiondLina" alt="">
+          <h2>Pasión de Linares</h2>
+          <!-- <button id="open4" class="bg-blue-500 text-white p-3 rounded-md">Historia</button> -->
+          <!-- Modal -->
+          <div id="modal4" class="fixed inset-0  bg-opacity-50 flex justify-center items-center  scale-0 opacity-0">
+            <div class="bg-white rounded-lg shadow-lg p-6 max-w-sm w-full">
+              <img src="./img/cornetaspasion.jpg" alt="">
+              <p class="mb-4">
+                La Agrupación Musical «Ntro. P. Jesús de la Pasión «, fue fundada el 26 de octubre de 1996. Su
+                presentación ante el público tuvo lugar en su Concierto de Presentación celebrado el 28 de febrero de 1997
+                en el Parque Mariana Pineda de Linares, siendo apadrinada por la Agrupación Musical «Ntro. P. Jesús de la
+                Redención » de Córdoba, con quienes les une una estrecha relación.
+                Son un total de 80 componentes que, bajo la dirección de Juan Luis López Hernández, van dejando en todas
+                sus actuaciones la impronta de su calidad musical.</p>
+              <div class="flex justify-end">
+                <button id="closeModal4" class="bg-red-500 text-white px-4 py-2 rounded-md">Cerrar</button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-
-      <div class="bg-white rounded-xl shadow-x1 p-5 text-center">
-        <img id="open6" src="./img/granpoder.jfif" alt="">
-        <h2>Gran Poder Granada</h2>
-        <!-- <button id="open6" class="bg-blue-500 text-white p-3 rounded-md">Historia</button> -->
-        <!-- Modal -->
-        <div id="modal6" class="fixed inset-0  bg-opacity-50 flex justify-center items-center  scale-0 opacity-0">
-          <div class="bg-white rounded-lg shadow-lg p-6 max-w-sm w-full">
-            <img src="./img/granP.PNG" alt="">
-            <p class="mb-4">La formación musical se fundó en 1994, está formada por alrededor de cien componentes.El año
-              2017 estrenaron nuevos uniformes, presentados en un concierto extraordinario el día 27, de enero. En su
-              repertorio tienen varias marchas de composición propia, otras de las llamadas clásicas y otras de
-              diferentes bandas destacando las de Tres Caídas de Triana.</p>
-            <div class="flex justify-end">
-              <button id="closeModal6" class="bg-red-500 text-white px-4 py-2 rounded-md">Cerrar</button>
+  
+        <div class="rounded-xl shadow-x1 p-5 text-center place-items-center">
+          <img id="open5"  class="w-32 h-32 rounded-full" src="./img/despojado.jfif" alt="">
+          <h2>Despojado Granada</h2>
+          <!-- <button id="open5" class="bg-blue-500 text-white p-3 rounded-md">Historia</button> -->
+          <!-- Modal -->
+          <div id="modal5" class="fixed inset-0  bg-opacity-50 flex justify-center items-center  scale-0 opacity-0">
+            <div class="bg-white rounded-lg shadow-lg p-6 max-w-sm w-full">
+              <img src="./img/despo.jpg" alt="">
+              <p class="mb-4">La historia de esta formación comienza en el año 1993, cuando un grupo de compañeros y
+                hermanos de la Hermandad de Jesús Despojado de sus Vestiduras decidieron formar una banda de cornetas y
+                tambores, que poco a poco se ha convertido en una de las formaciones más reconocidas en el panorama
+                musical granadino.</p>
+              <div class="flex justify-end">
+                <button id="closeModal5" class="bg-red-500 text-white px-4 py-2 rounded-md">Cerrar</button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-
-      <div class="bg-white rounded-xl shadow-x1 p-5 text-center">
-        <img id="open7" src="./img/estrella.jfif" alt="">
-        <h2>Estrella Granada</h2>
-        <!-- <button id="open7" class="bg-blue-500 text-white p-3 rounded-md">Historia</button> -->
-        <!-- Modal -->
-        <div id="modal7" class="fixed inset-0  bg-opacity-50 flex justify-center items-center  scale-0 opacity-0">
-          <div class="bg-white rounded-lg shadow-lg p-6 max-w-sm w-full">
-            <img src="./img/estre.jpg" alt="">
-            <p class="mb-4">En septiembre del año 1979 se fundaba la llamada por aquel entonces “Banda de la
-              Estrella”, bajo el amparo de la Cofradía de Nazarenos de Nuestro Padre Jesús de la Pasión y María
-              Santísima de la Estrella, en el popular barrio granadino del Albayzín. Un grupo de muchachos formaron
-              la banda de cornetas y tambores de “La Estrella”, (basada principalmente en toques de estilo militar).
-
-              La polifonía de
-              las marchas era muy limitada, ya que sólo se disponían de cornetas rasas y alguna de llave, siendo
-              director musical de la misma D. Joaquín Tesifón Rojas, (conocido en el ambiente musical cofrade como
-              el “Maestro Quini”).</p>
-            <div class="flex justify-end">
-              <button id="closeModal7" class="bg-red-500 text-white px-4 py-2 rounded-md">Cerrar</button>
+  
+        <div class="rounded-xl shadow-x1 p-5 text-center place-items-center">
+          <img id="open6"  class="w-32 h-32 rounded-full" src="./img/granpoder.jfif" alt="">
+          <h2>Gran Poder Granada</h2>
+          <!-- <button id="open6" class="bg-blue-500 text-white p-3 rounded-md">Historia</button> -->
+          <!-- Modal -->
+          <div id="modal6" class="fixed inset-0  bg-opacity-50 flex justify-center items-center  scale-0 opacity-0">
+            <div class="bg-white rounded-lg shadow-lg p-6 max-w-sm w-full">
+              <img src="./img/granP.PNG" alt="">
+              <p class="mb-4">La formación musical se fundó en 1994, está formada por alrededor de cien componentes.El año
+                2017 estrenaron nuevos uniformes, presentados en un concierto extraordinario el día 27, de enero. En su
+                repertorio tienen varias marchas de composición propia, otras de las llamadas clásicas y otras de
+                diferentes bandas destacando las de Tres Caídas de Triana.</p>
+              <div class="flex justify-end">
+                <button id="closeModal6" class="bg-red-500 text-white px-4 py-2 rounded-md">Cerrar</button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-
-      <div class="bg-white rounded-xl shadow-x1 p-5 text-center">
-        <img id="open8" src="./img/esperanzaMalaga.jpg" alt="">
-        <h2>Esperanza Malaga</h2>
-        <!-- <button id="open8" class="bg-blue-500 text-white p-3 rounded-md">Historia</button> -->
-        <!-- Modal -->
-        <div id="modal8" class="fixed inset-0  bg-opacity-50 flex justify-center items-center  scale-0 opacity-0">
-          <div class="bg-white rounded-lg shadow-lg p-6 max-w-sm w-full">
-            <img src="./img/espe.jpg" alt="">
-            <p class="mb-4">El origen de la Archicofradía del Dulce Nombre de Jesús está ligado al asentamiento en
-              Málaga de la Orden de Predicadores (Dominicos). Dicho asentamiento se produce sólo 7 años después de la
-              Reconquista de la ciudad por los Reyes Católicos en 1487, y se materializa con la fundación del Convento
-              de Santo Domingo y San Carlos en 1494.</p>
-            <div class="flex justify-end">
-              <button id="closeModal8" class="bg-red-500 text-white px-4 py-2 rounded-md">Cerrar</button>
+  
+        <div class="rounded-xl shadow-x1 p-5 text-center place-items-center">
+          <img id="open7" class="w-32 h-32 rounded-full" src="./img/estrella.jfif" alt="">
+          <h2>Estrella Granada</h2>
+          <!-- <button id="open7" class="bg-blue-500 text-white p-3 rounded-md">Historia</button> -->
+          <!-- Modal -->
+          <div id="modal7" class="fixed inset-0  bg-opacity-50 flex justify-center items-center  scale-0 opacity-0">
+            <div class="bg-white rounded-lg shadow-lg p-6 max-w-sm w-full">
+              <img src="./img/estre.jpg" alt="">
+              <p class="mb-4">En septiembre del año 1979 se fundaba la llamada por aquel entonces “Banda de la
+                Estrella”, bajo el amparo de la Cofradía de Nazarenos de Nuestro Padre Jesús de la Pasión y María
+                Santísima de la Estrella, en el popular barrio granadino del Albayzín. Un grupo de muchachos formaron
+                la banda de cornetas y tambores de “La Estrella”, (basada principalmente en toques de estilo militar).
+  
+                La polifonía de
+                las marchas era muy limitada, ya que sólo se disponían de cornetas rasas y alguna de llave, siendo
+                director musical de la misma D. Joaquín Tesifón Rojas, (conocido en el ambiente musical cofrade como
+                el “Maestro Quini”).</p>
+              <div class="flex justify-end">
+                <button id="closeModal7" class="bg-red-500 text-white px-4 py-2 rounded-md">Cerrar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="rounded-xl shadow-x1 p-5 text-center place-items-center">
+          <img id="open8" class="w-32 h-32 rounded-full" src="./img/esperanzaMalaga.jpg" alt="">
+          <h2>Esperanza Malaga</h2>
+          <!-- <button id="open8" class="bg-blue-500 text-white p-3 rounded-md">Historia</button> -->
+          <!-- Modal -->
+          <div id="modal8" class="fixed inset-0  bg-opacity-50 flex justify-center items-center  scale-0 opacity-0">
+            <div class="bg-white rounded-lg shadow-lg p-6 max-w-sm w-full">
+              <img src="./img/espe.jpg" alt="">
+              <p class="mb-4">El origen de la Archicofradía del Dulce Nombre de Jesús está ligado al asentamiento en
+                Málaga de la Orden de Predicadores (Dominicos). Dicho asentamiento se produce sólo 7 años después de la
+                Reconquista de la ciudad por los Reyes Católicos en 1487, y se materializa con la fundación del Convento
+                de Santo Domingo y San Carlos en 1494.</p>
+              <div class="flex justify-end">
+                <button id="closeModal8" class="bg-red-500 text-white px-4 py-2 rounded-md">Cerrar</button>
+              </div>
             </div>
           </div>
         </div>
@@ -302,9 +334,43 @@
 
 
     </section>
+
+    <section>
+      <h1 class="text-3xl font-bold mb-6">Línea de Tiempo</h1>
+    <div class="relative w-full max-w-2xl">
+        <div class="flex justify-between items-center border-t-4 border-gray-600 py-6 relative">
+            <button class="relative w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center hover:bg-gray-500 transition" data-index="0">2000</button>
+            <button class="relative w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center hover:bg-gray-500 transition" data-index="1">2005</button>
+            <button class="relative w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center hover:bg-gray-500 transition" data-index="2">2010</button>
+            <button class="relative w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center hover:bg-gray-500 transition" data-index="3">2015</button>
+            <button class="relative w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center hover:bg-gray-500 transition" data-index="4">2020</button>
+        </div>
+        <div id="timelineText" class="mt-6 p-4 bg-gray-800 rounded-lg text-center shadow-lg text-lg">
+            Inicio del nuevo milenio.
+        </div>
+        
+    </div>
+    
+    </section>
   </main>
 
   <script>
+    const lineatiempo = [
+            "Inicio del nuevo milenio.",
+            "YouTube fue lanzado.",
+            "El iPad de Apple fue presentado.",
+            "La realidad virtual se populariza.",
+            "Pandemia de COVID-19."
+        ];
+
+        $(document).ready(function() {
+            $('button').click(function() {
+                let index = $(this).data('index');
+                $('#timelineText').text(lineatiempo[index]);
+                $('.highlight').remove();
+                $(this).append('<div class="lineaEstilo"></div>');
+            });
+        });
     // Obtener los elementos
     const openModalButton = document.getElementById("openModal");
     const open2 = document.getElementById("open2");
@@ -314,6 +380,8 @@
     const open6 = document.getElementById("open6");
     const open7 = document.getElementById("open7");
     const open8 = document.getElementById("open8");
+    const open9 = document.getElementById("open9");
+
 
 
 
@@ -325,6 +393,8 @@
     const modal6 = document.getElementById("modal6");
     const modal7 = document.getElementById("modal7");
     const modal8 = document.getElementById("modal8");
+    const modal9 = document.getElementById("modal9");
+
 
 
 
@@ -337,6 +407,7 @@
     const closeModalButton6 = document.getElementById("closeModal6");
     const closeModalButton7 = document.getElementById("closeModal7");
     const closeModalButton8 = document.getElementById("closeModal8");
+    const closeModalButton9 = document.getElementById("closeModal9");
 
 
 
@@ -438,6 +509,18 @@
         }
       })
     });
+    open9.addEventListener("click", () => {
+      modal9.classList.add("animate-abrir");
+      modal9.classList.remove("animate-cerrar");
+      document.querySelector("body").style.overflowY="hidden";
+      document.querySelectorAll(".este > div > div").forEach(element =>{
+        if(element.classList.contains('animate-abrir')){
+          element.style.zIndex="999"
+        }else{
+          element.parentElement.style.filter="blur(10px)";
+        }
+      })
+    });
 
 
     // Cerrar el modal
@@ -529,6 +612,18 @@
     closeModalButton8.addEventListener("click", () => {
       modal8.classList.remove("animate-abrir");
       modal8.classList.add("animate-cerrar");
+      document.querySelector("body").style.overflowY="auto";
+      document.querySelectorAll(".este > div > div").forEach(element =>{
+        if(element.classList.contains('animate-cerrar')){
+          element.style.zIndex="999";
+        }else{
+          element.parentElement.style.filter="blur(0px)";
+        }
+      })
+    });
+    closeModalButton9.addEventListener("click", () => {
+      modal9.classList.remove("animate-abrir");
+      modal9.classList.add("animate-cerrar");
       document.querySelector("body").style.overflowY="auto";
       document.querySelectorAll(".este > div > div").forEach(element =>{
         if(element.classList.contains('animate-cerrar')){
