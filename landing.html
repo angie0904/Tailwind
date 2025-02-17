@@ -8,8 +8,10 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
+
   <title>Document</title>
   <style type="text/tailwindcss">
+    
     .lineaEstilo {
             background-color: rgba(59, 130, 246, 0.5);
             border-radius: 50%;
@@ -118,6 +120,8 @@
     </nav>
 
   </header>
+
+
   <main class="bg-green-100">
     <section class="container mx-auto py-12 px-6 flex items-center flex-col md:flex-row gap-40 justify-between">
       <div class="text-center md:text-left w-3/2">
@@ -131,14 +135,14 @@
           Semana Santa. </p>
       </div>
 
-      <img class="w-full md:w-1/2  w-rounded-xl" src="./img/banner.jpg" alt="">
+      <img class="w-full md:w-1/2  rounded-3xl " src="./img/banner.jpg" alt="">
 
 
     </section>
     <section class="text-center">
       <h2 class="text-2xl">Bandas que tocan en el evento</h2>
       <p>Haz clic sobre ellas para saber un poquito de su historia</p>
-      <div class=" este grid md:grid-cols-3 gap-6 p-5 ">
+      <div class=" este grid md:grid-cols-3 gap-6 p-5 text-center ">
 
         <div class=" rounded-xl shadow-x1 p-5 text-center place-items-center">
           <img id="openModal" class="w-32 h-32 rounded-full " src="./img/rosarioC" alt="">
@@ -350,13 +354,11 @@
 
     <section class="h-100 p-10 flex gap-40 ">
       <div class="">
-        <div class="px-35">
-          <img class="w-100 p-9 absolute " src="./img/armargura.PNG" alt="">
+        <div class="flex">
+          <img class="w-80 rounded-3xl border-t-4 border-r-4 hover:scale-110 transition-transform duration-300" src="./img/armargura.PNG" alt="">
+          <img class="w-80 rounded-3xl border-t-4 border-r-4 hover:scale-110 transition-transform duration-300 " src="./img/huerto.jpg" alt="">
         </div>
-        <div class="">
-          <img class="w-80 absolute hover:static" src="./img/huerto.jpg" alt="">
 
-        </div>
       </div>
       <div class="w-1/2">
         <h2>Organizado por la Cofradía de la Oración en el Huerto</h2>
@@ -409,11 +411,10 @@
         <div class="mx-auto max-w-4xl text-center">
           <img src="./img/escenario.JPG" alt="">
         </div>
-        
+
         <div
           class="mx-auto mt-16 grid max-w-lg grid-cols-1 items-center gap-y-6 sm:mt-20 sm:gap-y-0 lg:max-w-4xl lg:grid-cols-4">
-          <div
-            class="bg-white/60 p-5 ring-1 ring-gray-900/10">
+          <div class="bg-white/60 p-5 ring-1 ring-gray-900/10">
             <h2 class="font-bold bg-green-400 ">Ruedo</h3>
               <p class="mt-4 flex items-baseline gap-x-2">
                 <span class="text-5xl font-semibold tracking-tight text-gray">32,40€</span>
@@ -424,7 +425,7 @@
                   class="mt-8 block rounded-md bg-indigo-500 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500 sm:mt-10">Comprar</a>
               </div>
           </div>
-          <div class="relative rounded-3xl bg-gray-900 p-8 ring-1 shadow-2xl ring-gray-900/10 sm:p-10">
+          <div class="relative rounded-3xl bg-gray-900 p-8 ring-1 shadow-2xl ring-gray-900/10 sm:p-10 hover:scale-110 transition-transform duration-300">
             <h2 class="font-bold bg-pink-400">Barrera</h3>
               <p class="mt-4 flex items-baseline gap-x-2">
                 <span class="text-5xl font-semibold tracking-tight text-white">32,40€</span>
@@ -433,34 +434,69 @@
                   class="mt-8 block rounded-md px-3.5 py-2.5 text-center text-sm font-semibold text-indigo-600 ring-1 ring-indigo-200 ring-inset hover:ring-indigo-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 sm:mt-10">Comprar</a>
               </div>
           </div>
-          <div
-          class="bg-white/60 p-5 ring-1 ring-gray-900/10">
-          <h2 class="font-bold bg-purple-500 ">Contrabarrera</h3>
-            <p class="mt-4 flex items-baseline gap-x-2">
-              <span class="text-5xl font-semibold tracking-tight text-gray">32,40€</span>
+          <div class="bg-white/60 p-5 ring-1 ring-gray-900/10 ">
+            <h2 class="font-bold bg-purple-500 ">Contrabarrera</h3>
+              <p class="mt-4 flex items-baseline gap-x-2">
+                <span class="text-5xl font-semibold tracking-tight text-gray">32,40€</span>
 
-              </ul>
-            <div>
-              <a href="#" aria-describedby="tier-hobby"
-                class="mt-8 block rounded-md bg-indigo-500 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500 sm:mt-10">Comprar</a>
-            </div>
-        </div>
-              <div class="relative rounded-3xl bg-gray-900 p-8 ring-1 shadow-2xl ring-gray-900/10 sm:p-10">
-                <h2 class="font-bold bg-blue-400">Tendidos</h3>
-                  <p class="mt-4 flex items-baseline gap-x-2">
-                    <span class="text-5xl font-semibold tracking-tight text-white">27,00€</span>
-                  <div>
-                    <a href="#" aria-describedby="tier-enterprise"
-                    class="mt-8 block rounded-md px-3.5 py-2.5 text-center text-sm font-semibold text-indigo-600 ring-1 ring-indigo-200 ring-inset hover:ring-indigo-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 sm:mt-10">Comprar</a>
-                  </div>
+                </ul>
+              <div>
+                <a href="#" aria-describedby="tier-hobby"
+                  class="mt-8 block rounded-md bg-indigo-500 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500 sm:mt-10">Comprar</a>
+              </div>
+          </div>
+          <div class="relative rounded-3xl bg-gray-900 p-8 ring-1 shadow-2xl ring-gray-900/10 sm:p-10 hover:scale-110 transition-transform duration-300">
+            <h2 class="font-bold bg-blue-400">Tendidos</h3>
+              <p class="mt-4 flex items-baseline gap-x-2">
+                <span class="text-5xl font-semibold tracking-tight text-white">27,00€</span>
+              <div>
+                <a href="#" aria-describedby="tier-enterprise"
+                  class="mt-8 block rounded-md px-3.5 py-2.5 text-center text-sm font-semibold text-indigo-600 ring-1 ring-indigo-200 ring-inset hover:ring-indigo-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 sm:mt-10">Comprar</a>
               </div>
           </div>
         </div>
+      </div>
 
+
+    </section>
+    <section class="h-100">
+      <h2 class="font-bold text-center">Entradas Movil</h2>
+      <h3 class="text-center">¿Como Funcionan?</h3>
+      <div class="flex p-10 gap-6">
+
+        <div>
+          <img class="w-32 h-32 rounded-full" src="./img/descarga.jpg" alt="">
+          <h3 class="font-bold">1. Descarga la APP o entra en ticketmaster.es</h3>
+        </div>
+        <div>
+          <img class="w-32 h-32 rounded-full" src="./img/perfil.png" alt="">
+          <h3 class="font-bold">2. Tus entradas aparecerán en la sección 'Mi Cuenta'</h3>
+        </div>
+        <div>
+          <img class="w-32 h-32 rounded-full" src="./img/qr.png" alt="">
+          <h3 class="font-bold">3. Si has comprado más de una entrada, transfiérela a tus amig@s o familiares**</h3>
+        </div>
+        <div>
+          <img class="w-32 h-32 rounded-full" src="./img/4movil.png" alt="">
+          <h3 class="font-bold">4. Tus amigos o familiares recibirán un email para aceptar su entrada y guardarla en su cuenta</h3>
+        </div>
+        <div>
+          <img class="w-32 h-32 rounded-full" src="./img/scanner.png" alt="">
+          <h3 class="font-bold">5. Enseña tu entrada desde el móvil al llegar al recinto***</h3>
+        </div>
+      </div>
+    </section>
+    <section>
+      <iframe src="https://www.google.es/maps/place/Plaza+de+toros+de+Atarfe/@37.2242299,-3.7037702,17z/data=!3m1!4b1!4m6!3m5!1s0xd71fe336f7adda9:0x815dce17403a72c2!8m2!3d37.2242257!4d-3.7011953!16s%2Fg%2F11j0j_v_kn?hl=es&entry=ttu&g_ep=EgoyMDI1MDIxMi4wIKXMDSoJLDEwMjExMjM0SAFQAw%3D%3D" frameborder="0"></iframe>
     </section>
   </main>
 
   <script>
+    
+  
+   
+  
+
     const lineatiempo = [
       "A.M. Estrella(Granada)",
       "CC. Y TT. Gran Poder(Granada)",
