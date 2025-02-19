@@ -5,7 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Grechen+Fuemen&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Sigmar&display=swap" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
 
@@ -17,8 +19,11 @@
             border-radius: 50%;
             position: absolute;
             inset: 0;
+            font-family: font-title;
         }
     @theme{
+      --font-title:'Anton';
+      --font-body:'Merriweather';
       --animate-abrir: abrir 1s ease-in-out forwards;
 
     @keyframes abrir {
@@ -49,7 +54,7 @@
   </style>
 </head>
 
-<body>
+<body >
   <header>
     <nav class="bg-purple-900">
       <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -88,14 +93,16 @@
             <div class="hidden sm:ml-6 sm:block">
               <div class="flex space-x-4">
                 <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                <a href="#" class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white"
-                  aria-current="page">Dashboard</a>
-                <a href="#"
-                  class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Team</a>
-                <a href="#"
-                  class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Projects</a>
-                <a href="#"
-                  class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Calendar</a>
+                <a href="#bandas" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                  aria-current="page">Bandas</a>
+                <a href="#organizador"
+                  class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Organizador</a>
+                <a href="#horario"
+                  class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Horario de actuación</a>
+                <a href="#entrada"
+                  class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Entradas</a>
+                  <a href="#ubi"
+                  class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Ubicación</a>
               </div>
             </div>
           </div>
@@ -107,14 +114,16 @@
       <div class="sm:hidden" id="mobile-menu">
         <div class="space-y-1 px-2 pt-2 pb-3">
 
-          <a href="#" class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white"
-            aria-current="page">Dashboard</a>
+          <a href="#bandas" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+            aria-current="page">Bandas</a>
+            <a href="#"
+            class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Organizador</a>
           <a href="#"
-            class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Team</a>
+            class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Horario de actuación</a>
           <a href="#"
-            class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Projects</a>
-          <a href="#"
-            class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Calendar</a>
+            class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Entradas</a>
+            <a href="#"
+            class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Ubicación</a>
         </div>
       </div>
     </nav>
@@ -123,9 +132,10 @@
 
 
   <main class="bg-green-100">
-    <section class="container mx-auto py-12 px-6 flex items-center flex-col md:flex-row gap-40 justify-between">
-      <div class="text-center md:text-left w-3/2">
-        <p class=" text-3x1 ">Presentamos <span class="font-bold">Fitur</span> el proyecto ‘Vísperas Cofrades’, que
+    
+    <section class="container mx-auto py-12 px-6 flex items-center flex-col md:flex-row gap-6">
+      <div class="text-center md:text-leftfont-body">
+        <p class=" text-3x1 ">Presentamos <span class="font-bold font-title">Fitur</span> el proyecto ‘Vísperas Cofrades’, que
           convertirá a la ciudad de Atarfe en la capital de la música de Semana Santa.<br>El evento, que cuenta con la
           colaboración de la Diputación de Granada y su marca ‘Sabor Granada’, se desarrollará en un enorme escenario
           que acogerá a las distintas bandas, cuyas intervenciones estarán acompañadas por videos sobre la trayectoria
@@ -135,248 +145,95 @@
           Semana Santa. </p>
       </div>
 
-      <img class="w-full md:w-1/2  rounded-3xl " src="./img/banner.jpg" alt="">
+      <img class="w-full md:w-1/2 rounded-xl " src="./img/banner.jpg" alt="">
 
 
     </section>
-    <section class="text-center">
-      <h2 class="text-2xl">Bandas que tocan en el evento</h2>
-      <p>Haz clic sobre ellas para saber un poquito de su historia</p>
-      <div class=" este grid md:grid-cols-3 gap-6 p-5 text-center ">
+    <section class="text-center p-20" id="bandas">
+      <h2 class="text-3xl font-title">Bandas que tocan en el evento</h2>
+      <div class=" flex flex-col lg:flex-row gap-6 p-5 text-center ">
 
-        <div class=" rounded-xl shadow-x1 p-5 text-center place-items-center">
+        <div class=" rounded-xl shadow-x1 p-5 text-center place-items-center font-title">
           <img id="openModal" class="w-32 h-32 rounded-full " src="./img/rosarioC" alt="">
           <h2>Rosario de Cadiz</h2>
-          <!-- <button id="openModal" class="bg-blue-500 text-white p-3 rounded-md">Historia</button> -->
-          <!-- Modal -->
-          <div id="modal" class="fixed inset-0  bg-opacity-50 flex justify-center items-center scale-0 opacity-0">
-            <div class="bg-white rounded-lg shadow-lg p-6 max-w-sm w-full">
-              <img src="./img/rosa.jpg" alt="">
-              <p class="mb-4">La Banda de Cornetas y Tambores Nuestra Señora del Rosario Coronada nace el 7 de mayo de
-                1996 bajo la advocación del Santísimo Cristo de la Humildad y Paciencia de Cádiz con el particular
-                estilo
-                de la policía armada.
 
-                Rosario de Cádiz comenzaba en sus inicios con unos setenta componentes (con edades comprendidas entre 13
-                y
-                30 años), cabe destacar que en aquella época, era una cifra de componentes inicial bastante amplia,
-                contando con un privilegiado y emblemático lugar de ensayo como son las Puertas de Tierra..</p>
-              <div class="flex justify-end">
-                <button id="closeModal" class="bg-red-500 text-white px-4 py-2 rounded-md">Cerrar</button>
-              </div>
-            </div>
-          </div>
         </div>
 
-        <div class="rounded-xl shadow-x1 p-5 text-center place-items-center">
+        <div class="rounded-xl shadow-x1 p-5 text-center place-items-center font-title">
           <img id="open2" class="w-32 h-32 rounded-full" src="./img/cigarreras.jpg" alt="">
           <h2>Las Cigarreras</h2>
-          <!-- <button id="open2" class="bg-blue-500 text-white p-3 rounded-md">Historia</button> -->
-          <!-- Modal -->
-          <div id="modal2" class="fixed inset-0  bg-opacity-50 flex justify-center items-center  scale-0 opacity-0">
-            <div class="bg-white rounded-lg shadow-lg p-6 max-w-sm w-full">
-              <img src="./img/bciga.jpg" alt="">
-              <p class="mb-4">Es en el transcurso de 1979 cuando en la Hermandad de Las Cigarreras surge el germen de la
-                que hoy día es su banda más emblemática: La banda de cornetas y tambores Nuestra Señora de la Victoria
-                “Las Cigarreras”. Como ya es sabido por todos, en sus comienzos lleva un estilo mixto, que no era otra
-                cosa que un híbrido entre los ya conocidos de la Policía Armada y de la Guardia Civil, donde se
-                interpretaban marchas indistintamente de ambas formaciones, y cuya instrumentación estaba compuesta por
-                cornetas y tambores, trompetas, cajas y platos, incorporándose un poco más adelante el trombón.</p>
-              <div class="flex justify-end">
-                <button id="closeModal2" class="bg-red-500 text-white px-4 py-2 rounded-md">Cerrar</button>
-              </div>
-            </div>
-          </div>
         </div>
 
-        <div class="rounded-xl shadow-x1 p-5 text-center place-items-center">
+        <div class="rounded-xl shadow-x1 p-5 text-center place-items-center font-title">
           <img id="open3" class="w-32 h-32 rounded-full" src="./img/sanisi.jpg" alt="">
           <H2>San Isidro Armilla</H2>
-          <!-- <button id="open3" class="bg-blue-500 text-white p-3 rounded-md">Historia</button> -->
-          <!-- Modal -->
-          <div id="modal3" class="fixed inset-0  bg-opacity-50 flex justify-center items-center  scale-0 opacity-0">
-            <div class="bg-white rounded-lg shadow-lg p-6 max-w-sm w-full">
-              <img src="./img/bsanIS.jpg" alt="">
-              <p class="mb-4">La Asociación Musical San Isidro de Armilla (AMSIA) fue fundada en el año 1985, siendo su
-                primer presidente D. Manuel Jiménez y estando dirigida por D. José María Sola Formada por 15 componentes
-                todos ellos vecinos de Armilla.
-                En 1991 se produjo el cambio de Director, tomando posesión D.José Melchor Perelló Lavilla, que se
-                encontró
-                a una Asociación fragmentada por diversas razones y con un número muy bajo de componentes.
-                Afortunadamente
-                los componentes que formaban aquella plantilla eran jóvenes comprometidos y responsables y supieron, con
-                una gran dosis de ilusión superar las adversidades, adaptarse al nuevo estilo de escuela y banda y
-                trabajar a diario para ir formándose como músicos.
-                La juventud del Director hizo posible que se creara un clima de amistad y la buena relación existente
-                entre todos los componentes hizo que fuese el punto de apoyo para mover hacia adelante este proyecto.
-              </p>
-              <div class="flex justify-end">
-                <button id="closeModal3" class="bg-red-500 text-white px-4 py-2 rounded-md">Cerrar</button>
-              </div>
-            </div>
-          </div>
         </div>
 
-        <div class="rounded-xl shadow-x1 p-5 text-center place-items-center">
+        <div class="rounded-xl shadow-x1 p-5 text-center place-items-center font-title">
           <img id="open9" class="w-32 h-32 rounded-full" src="./img/daniB.jpeg" alt="">
           <H2>Dani de Baza</H2>
-          <!-- <button id="open3" class="bg-blue-500 text-white p-3 rounded-md">Historia</button> -->
-          <!-- Modal -->
-          <div id="modal9" class="fixed inset-0  bg-opacity-50 flex justify-center items-center  scale-0 opacity-0">
-            <div class="bg-white rounded-lg shadow-lg p-6 max-w-sm w-full">
-              <img src="./img/dniB.jpeg" alt="">
-              <p class="mb-4">Nacido en Baza, Granada en 1982, Daniel Jiménez Castro, conocido internacionalmente como
-                Dani de Baza, ha estado predestinado desde niño gracias a su padre, Antonio Jiménez Dengra, a formar
-                parte de la música y del mundo cofrade bastetano y andaluz.
-
-                Formado desde muy corta edad en la desaparecida Banda de la Esperanza de su ciudad natal, Dani de Baza
-                comenzó a destacar como instrumentista desde sus inicios. La trayectoria artística de Dani de Baza no ha
-                cesado, recorriendo desde 1996 las mejores bandas de Andalucía entre las que destacan Presentación al
-                Pueblo de Dos Hermanas en Sevilla, Tres Caídas de Triana en Sevilla y por último Tres Caídas del Realejo
-                en Granada.
-              </p>
-              <div class="flex justify-end">
-                <button id="closeModal9" class="bg-red-500 text-white px-4 py-2 rounded-md">Cerrar</button>
-              </div>
-            </div>
-          </div>
         </div>
 
-        <div class="rounded-xl shadow-x1 p-5 text-center place-items-center">
+        <div class="rounded-xl shadow-x1 p-5 text-center place-items-center font-title">
           <img id="open4" class="w-32 h-32 rounded-full" src="./img/pasiondLina" alt="">
           <h2>Pasión de Linares</h2>
-          <!-- <button id="open4" class="bg-blue-500 text-white p-3 rounded-md">Historia</button> -->
-          <!-- Modal -->
-          <div id="modal4" class="fixed inset-0  bg-opacity-50 flex justify-center items-center  scale-0 opacity-0">
-            <div class="bg-white rounded-lg shadow-lg p-6 max-w-sm w-full">
-              <img src="./img/cornetaspasion.jpg" alt="">
-              <p class="mb-4">
-                La Agrupación Musical «Ntro. P. Jesús de la Pasión «, fue fundada el 26 de octubre de 1996. Su
-                presentación ante el público tuvo lugar en su Concierto de Presentación celebrado el 28 de febrero de
-                1997
-                en el Parque Mariana Pineda de Linares, siendo apadrinada por la Agrupación Musical «Ntro. P. Jesús de
-                la
-                Redención » de Córdoba, con quienes les une una estrecha relación.
-                Son un total de 80 componentes que, bajo la dirección de Juan Luis López Hernández, van dejando en todas
-                sus actuaciones la impronta de su calidad musical.</p>
-              <div class="flex justify-end">
-                <button id="closeModal4" class="bg-red-500 text-white px-4 py-2 rounded-md">Cerrar</button>
-              </div>
-            </div>
-          </div>
         </div>
 
-        <div class="rounded-xl shadow-x1 p-5 text-center place-items-center">
+        <div class="rounded-xl shadow-x1 p-5 text-center place-items-center font-title">
           <img id="open5" class="w-32 h-32 rounded-full" src="./img/despojado.jfif" alt="">
           <h2>Despojado Granada</h2>
-          <!-- <button id="open5" class="bg-blue-500 text-white p-3 rounded-md">Historia</button> -->
-          <!-- Modal -->
-          <div id="modal5" class="fixed inset-0  bg-opacity-50 flex justify-center items-center  scale-0 opacity-0">
-            <div class="bg-white rounded-lg shadow-lg p-6 max-w-sm w-full">
-              <img src="./img/despo.jpg" alt="">
-              <p class="mb-4">La historia de esta formación comienza en el año 1993, cuando un grupo de compañeros y
-                hermanos de la Hermandad de Jesús Despojado de sus Vestiduras decidieron formar una banda de cornetas y
-                tambores, que poco a poco se ha convertido en una de las formaciones más reconocidas en el panorama
-                musical granadino.</p>
-              <div class="flex justify-end">
-                <button id="closeModal5" class="bg-red-500 text-white px-4 py-2 rounded-md">Cerrar</button>
-              </div>
-            </div>
-          </div>
         </div>
 
-        <div class="rounded-xl shadow-x1 p-5 text-center place-items-center">
+        <div class="rounded-xl shadow-x1 p-5 text-center place-items-center font-title">
           <img id="open6" class="w-32 h-32 rounded-full" src="./img/granpoder.jfif" alt="">
           <h2>Gran Poder Granada</h2>
-          <!-- <button id="open6" class="bg-blue-500 text-white p-3 rounded-md">Historia</button> -->
-          <!-- Modal -->
-          <div id="modal6" class="fixed inset-0  bg-opacity-50 flex justify-center items-center  scale-0 opacity-0">
-            <div class="bg-white rounded-lg shadow-lg p-6 max-w-sm w-full">
-              <img src="./img/granP.PNG" alt="">
-              <p class="mb-4">La formación musical se fundó en 1994, está formada por alrededor de cien componentes.El
-                año
-                2017 estrenaron nuevos uniformes, presentados en un concierto extraordinario el día 27, de enero. En su
-                repertorio tienen varias marchas de composición propia, otras de las llamadas clásicas y otras de
-                diferentes bandas destacando las de Tres Caídas de Triana.</p>
-              <div class="flex justify-end">
-                <button id="closeModal6" class="bg-red-500 text-white px-4 py-2 rounded-md">Cerrar</button>
-              </div>
-            </div>
-          </div>
+
         </div>
 
-        <div class="rounded-xl shadow-x1 p-5 text-center place-items-center">
+        <div class="rounded-xl shadow-x1 p-5 text-center place-items-center font-title">
           <img id="open7" class="w-32 h-32 rounded-full" src="./img/estrella.jfif" alt="">
           <h2>Estrella Granada</h2>
-          <!-- <button id="open7" class="bg-blue-500 text-white p-3 rounded-md">Historia</button> -->
-          <!-- Modal -->
-          <div id="modal7" class="fixed inset-0  bg-opacity-50 flex justify-center items-center  scale-0 opacity-0">
-            <div class="bg-white rounded-lg shadow-lg p-6 max-w-sm w-full">
-              <img src="./img/estre.jpg" alt="">
-              <p class="mb-4">En septiembre del año 1979 se fundaba la llamada por aquel entonces “Banda de la
-                Estrella”, bajo el amparo de la Cofradía de Nazarenos de Nuestro Padre Jesús de la Pasión y María
-                Santísima de la Estrella, en el popular barrio granadino del Albayzín. Un grupo de muchachos formaron
-                la banda de cornetas y tambores de “La Estrella”, (basada principalmente en toques de estilo militar).
-
-                La polifonía de
-                las marchas era muy limitada, ya que sólo se disponían de cornetas rasas y alguna de llave, siendo
-                director musical de la misma D. Joaquín Tesifón Rojas, (conocido en el ambiente musical cofrade como
-                el “Maestro Quini”).</p>
-              <div class="flex justify-end">
-                <button id="closeModal7" class="bg-red-500 text-white px-4 py-2 rounded-md">Cerrar</button>
-              </div>
-            </div>
-          </div>
         </div>
 
-        <div class="rounded-xl shadow-x1 p-5 text-center place-items-center">
+        <div class="rounded-xl shadow-x1 p-5 text-center place-items-center font-title">
           <img id="open8" class="w-32 h-32 rounded-full" src="./img/esperanzaMalaga.jpg" alt="">
           <h2>Esperanza Malaga</h2>
-          <!-- <button id="open8" class="bg-blue-500 text-white p-3 rounded-md">Historia</button> -->
-          <!-- Modal -->
-          <div id="modal8" class="fixed inset-0  bg-opacity-50 flex justify-center items-center  scale-0 opacity-0">
-            <div class="bg-white rounded-lg shadow-lg p-6 max-w-sm w-full">
-              <img src="./img/espe.jpg" alt="">
-              <p class="mb-4">El origen de la Archicofradía del Dulce Nombre de Jesús está ligado al asentamiento en
-                Málaga de la Orden de Predicadores (Dominicos). Dicho asentamiento se produce sólo 7 años después de la
-                Reconquista de la ciudad por los Reyes Católicos en 1487, y se materializa con la fundación del Convento
-                de Santo Domingo y San Carlos en 1494.</p>
-              <div class="flex justify-end">
-                <button id="closeModal8" class="bg-red-500 text-white px-4 py-2 rounded-md">Cerrar</button>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
 
 
     </section>
 
-    <section class="h-100 p-10 flex gap-40 ">
-      <div class="">
-        <div class="flex">
-          <img class="w-80 rounded-3xl border-t-4 border-r-4 hover:scale-110 transition-transform duration-300" src="./img/armargura.PNG" alt="">
-          <img class="w-80 rounded-3xl border-t-4 border-r-4 hover:scale-110 transition-transform duration-300 " src="./img/huerto.jpg" alt="">
-        </div>
+   
 
-      </div>
-      <div class="w-1/2">
+    <section class="container mx-auto py-12 px-6 flex items-center flex-col md:flex-row gap-6 "id="organizador">
+     
+        
+        <img class="w-80 rounded-3xl border-t-4 border-r-4 hover:scale-110 transition-transform duration-300" src="./img/armargura.PNG" alt="">
+        <img class="w-80 rounded-3xl border-t-4 border-r-4 hover:scale-110 transition-transform duration-300 " src="./img/huerto.jpg" alt="">
+     
+      <div class="text-center md:text-left w-3/2 font-body">
+        
+        
+        
         <h2>Organizado por la Cofradía de la Oración en el Huerto</h2>
       </div>
+      
+
+
     </section>
 
-    <section class="text-center mx-auto p-10 h-100">
-      <h1 class="text-3xl font-bold mb-6">Horario de actuación</h1>
-      <div class="relative w-full">
-        <div class="flex justify-between items-center border-t-4 border-purple-600 py-6 relative">
+    <section class="text-center mx-auto p-10 h-100" id="horario">
+      <h1 class="text-3xl mb-6 font-title">Horario de actuación</h1>
+      <div class="relative w-full p-6">
+        <div class="flex justify-between items-center border-t-4 border-purple-600 py-6 relative font-title">
           <button
-            class="relative w-12 h-12 bg-purple-700 rounded-full flex items-center justify-center hover:bg-gray-500 transition"
+            class="relative w-12 h-12 bg-purple-700 rounded-full flex items-center justify-center hover:bg-gray-500 transition "
             data-index="0">16:00</button>
           <button
             class="relative w-12 h-12 bg-purple-700 rounded-full flex items-center justify-center hover:bg-gray-500 transition"
             data-index="1">16:40</button>
           <button
-            class="relative w-12 h-12 bg-purple-700 rounded-full flex items-center justify-center hover:bg-gray-500 transition"
+            class="relative w-12 h-12 bg-purple-700 rounded-full flex items-center justify-center hover:bg-gray-500 transition "
             data-index="2">17:20</button>
           <button
             class="relative w-12 h-12 bg-purple-700 rounded-full flex items-center justify-center hover:bg-gray-500 transition"
@@ -393,23 +250,21 @@
           <button
             class="relative w-12 h-12 bg-purple-700 rounded-full flex items-center justify-center hover:bg-gray-500 transition"
             data-index="7">21:05</button>
-
-
         </div>
-        <div id="timelineText" class="mt-6 p-4  rounded-lg text-center shadow-lg text-lg">
+        <div id="timelineText" class="mt-6 p-4  rounded-lg text-center shadow-lg text-lg font-title">
 
         </div>
 
       </div>
 
     </section>
-    <section>
+    <section id="entrada">
       <div class="px-6 py-24 sm:py-32 lg:px-8">
         <div class="">
-          <h2>Compra tus Entradas</h2>
+          <h2 class="text-3xl mb-6 font-title text-center">Compra tus Entradas</h2>
         </div>
-        <div class="mx-auto max-w-4xl text-center">
-          <img src="./img/escenario.JPG" alt="">
+        <div class="mx-auto max-w-4xl">
+          <img src="./img/escenario.JPG" class="mx-auto" alt="">
         </div>
 
         <div
@@ -460,36 +315,84 @@
 
     </section>
     <section class="h-100">
-      <h2 class="font-bold text-center">Entradas Movil</h2>
-      <h3 class="text-center">¿Como Funcionan?</h3>
-      <div class="flex p-10 gap-6">
+      <h2 class="font-bold text-center font-title">Entradas Movil</h2>
+      <h3 class="text-center font-body">¿Como Funcionan?</h3>
+      <div class="flex p-10">
 
-        <div>
+        <div class="p-3">
           <img class="w-32 h-32 rounded-full" src="./img/descarga.jpg" alt="">
-          <h3 class="font-bold">1. Descarga la APP o entra en ticketmaster.es</h3>
+          <h3 class="font-title">1. Descarga la APP o entra en ticketmaster.es</h3>
         </div>
-        <div>
+        <div class="p-3">
           <img class="w-32 h-32 rounded-full" src="./img/perfil.png" alt="">
-          <h3 class="font-bold">2. Tus entradas aparecerán en la sección 'Mi Cuenta'</h3>
+          <h3 class="font-title">2. Tus entradas aparecerán en la sección 'Mi Cuenta'</h3>
         </div>
-        <div>
+        <div class="p-3">
           <img class="w-32 h-32 rounded-full" src="./img/qr.png" alt="">
-          <h3 class="font-bold">3. Si has comprado más de una entrada, transfiérela a tus amig@s o familiares**</h3>
+          <h3 class="font-title">3. Si has comprado más de una entrada, transfiérela a tus amig@s o familiares**</h3>
         </div>
-        <div>
+        <div class="p-3">
           <img class="w-32 h-32 rounded-full" src="./img/4movil.png" alt="">
-          <h3 class="font-bold">4. Tus amigos o familiares recibirán un email para aceptar su entrada y guardarla en su cuenta</h3>
+          <h3 class="font-title">4. Tus amigos o familiares recibirán un email para aceptar su entrada y guardarla en su cuenta</h3>
         </div>
-        <div>
+        <div class="p-3">
           <img class="w-32 h-32 rounded-full" src="./img/scanner.png" alt="">
-          <h3 class="font-bold">5. Enseña tu entrada desde el móvil al llegar al recinto***</h3>
+          <h3 class="font-title">5. Enseña tu entrada desde el móvil al llegar al recinto***</h3>
         </div>
       </div>
     </section>
-    <section>
-      <iframe src="https://www.google.es/maps/place/Plaza+de+toros+de+Atarfe/@37.2242299,-3.7037702,17z/data=!3m1!4b1!4m6!3m5!1s0xd71fe336f7adda9:0x815dce17403a72c2!8m2!3d37.2242257!4d-3.7011953!16s%2Fg%2F11j0j_v_kn?hl=es&entry=ttu&g_ep=EgoyMDI1MDIxMi4wIKXMDSoJLDEwMjExMjM0SAFQAw%3D%3D" frameborder="0"></iframe>
+
+    <section class="container mx-auto py-12 px-6 flex items-center flex-col md:flex-row justify-center gap-20" id="ubi">
+      <div class="text-center md:text-left font-body">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6353.978515033922!2d-3.703770223581234!3d37.22422994368177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd71fe336f7adda9%3A0x815dce17403a72c2!2sPlaza%20de%20toros%20de%20Atarfe!5e0!3m2!1ses!2ses!4v1739965316340!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>  
+      </div>
+
+      <div class="font-title">
+        <h2>22 de febrero</h2>
+        <h2>16:00h</h2>
+        <h2>ATARFE - Coliseo de Atarfe</h2>
+      </div>
+
+
     </section>
+    
   </main>
+  <footer class="bg-purple-900 text-white py-8">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-wrap justify-between">
+        <!-- Sección de navegación -->
+        <div class="w-full md:w-1/3 mb-4 md:mb-0">
+          <h3 class="text-lg font-semibold mb-2">Visperas Cofrades</h3>
+          <ul>
+            <li><a href="#bandas" class="hover:underline">Bandas</a></li>
+            <li><a href="#cofradia" class="hover:underline">Cofradía</a></li>
+            <li><a href="#organizadora" class="hover:underline">Organizadora</a></li>
+            <li><a href="#horario" class="hover:underline">Horario de actuación</a></li>
+            <li><a href="#entrada" class="hover:underline">Entradas</a></li>
+          </ul>
+        </div>
+  
+        <!-- Sección de información del evento -->
+        <div class="w-full md:w-1/3 mb-4 md:mb-0">
+          <h3 class="text-lg font-semibold mb-2">Evento</h3>
+          <p><strong>Ubicación:</strong> Coliseo Atarfe</p>
+          <p><strong>Hora:</strong> 16:00</p>
+          <p><strong>Día:</strong> 22 de febrero 2025, Sábado</p>
+        </div>
+  
+        <!-- Sección de contacto y enlaces adicionales -->
+        <div class="w-full md:w-1/3">
+          <h3 class="text-lg font-semibold mb-2">Entradas y Descargas</h3>
+          <p>Para descargar tu entrada móvil, sigue los pasos en nuestra sección de <a href="#entradas" class="hover:underline">entradas</a>.</p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="text-center mt-8">
+      <p class="text-sm">© 2025 Visperas Cofrades. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+  
 
   <script>
     
@@ -517,268 +420,7 @@
         $(this).append('<div class="lineaEstilo"></div>');
       });
     });
-    // Obtener los elementos
-    const openModalButton = document.getElementById("openModal");
-    const open2 = document.getElementById("open2");
-    const open3 = document.getElementById("open3");
-    const open4 = document.getElementById("open4");
-    const open5 = document.getElementById("open5");
-    const open6 = document.getElementById("open6");
-    const open7 = document.getElementById("open7");
-    const open8 = document.getElementById("open8");
-    const open9 = document.getElementById("open9");
-
-
-
-
-    const modal = document.getElementById("modal");
-    const modal2 = document.getElementById("modal2");
-    const modal3 = document.getElementById("modal3");
-    const modal4 = document.getElementById("modal4");
-    const modal5 = document.getElementById("modal5");
-    const modal6 = document.getElementById("modal6");
-    const modal7 = document.getElementById("modal7");
-    const modal8 = document.getElementById("modal8");
-    const modal9 = document.getElementById("modal9");
-
-
-
-
-
-    const closeModalButton = document.getElementById("closeModal");
-    const closeModalButton2 = document.getElementById("closeModal2");
-    const closeModalButton3 = document.getElementById("closeModal3");
-    const closeModalButton4 = document.getElementById("closeModal4");
-    const closeModalButton5 = document.getElementById("closeModal5");
-    const closeModalButton6 = document.getElementById("closeModal6");
-    const closeModalButton7 = document.getElementById("closeModal7");
-    const closeModalButton8 = document.getElementById("closeModal8");
-    const closeModalButton9 = document.getElementById("closeModal9");
-
-
-
-    // Mostrar el modal
-    openModalButton.addEventListener("click", () => {
-      modal.classList.add("animate-abrir");
-      modal.classList.remove("animate-cerrar");
-      document.querySelector("body").style.overflowY = "hidden";
-      document.querySelectorAll(".este > div > div").forEach(element => {
-        if (element.classList.contains('animate-abrir')) {
-          element.style.zIndex = "999"
-        } else {
-          element.parentElement.style.filter = "blur(10px)";
-        }
-      })
-
-    });
-    open2.addEventListener("click", () => {
-      modal2.classList.add("animate-abrir");
-      modal2.classList.remove("animate-cerrar");
-      document.querySelector("body").style.overflowY = "hidden";
-      document.querySelectorAll(".este > div > div").forEach(element => {
-        if (element.classList.contains('animate-abrir')) {
-          element.style.zIndex = "999"
-        } else {
-          element.parentElement.style.filter = "blur(10px)";
-        }
-      })
-    });
-    open3.addEventListener("click", () => {
-      modal3.classList.add("animate-abrir");
-      modal3.classList.remove("animate-cerrar");
-      document.querySelector("body").style.overflowY = "hidden";
-      document.querySelectorAll(".este > div > div").forEach(element => {
-        if (element.classList.contains('animate-abrir')) {
-          element.style.zIndex = "999"
-        } else {
-          element.parentElement.style.filter = "blur(10px)";
-        }
-      })
-    });
-    open4.addEventListener("click", () => {
-      modal4.classList.add("animate-abrir");
-      modal4.classList.remove("animate-cerrar");
-      document.querySelector("body").style.overflowY = "hidden";
-      document.querySelectorAll(".este > div > div").forEach(element => {
-        if (element.classList.contains('animate-abrir')) {
-          element.style.zIndex = "999"
-        } else {
-          element.parentElement.style.filter = "blur(10px)";
-        }
-      })
-    });
-    open5.addEventListener("click", () => {
-      modal5.classList.add("animate-abrir");
-      modal5.classList.remove("animate-cerrar");
-      document.querySelector("body").style.overflowY = "hidden";
-      document.querySelectorAll(".este > div > div").forEach(element => {
-        if (element.classList.contains('animate-abrir')) {
-          element.style.zIndex = "999"
-        } else {
-          element.parentElement.style.filter = "blur(10px)";
-        }
-      })
-    });
-    open6.addEventListener("click", () => {
-      modal6.classList.add("animate-abrir");
-      modal6.classList.remove("animate-cerrar");
-      document.querySelector("body").style.overflowY = "hidden";
-      document.querySelectorAll(".este > div > div").forEach(element => {
-        if (element.classList.contains('animate-abrir')) {
-          element.style.zIndex = "999"
-        } else {
-          element.parentElement.style.filter = "blur(10px)";
-        }
-      })
-    });
-    open7.addEventListener("click", () => {
-      modal7.classList.add("animate-abrir");
-      modal7.classList.remove("animate-cerrar");
-      document.querySelector("body").style.overflowY = "hidden";
-      document.querySelectorAll(".este > div > div").forEach(element => {
-        if (element.classList.contains('animate-abrir')) {
-          element.style.zIndex = "999"
-        } else {
-          element.parentElement.style.filter = "blur(10px)";
-        }
-      })
-    });
-    open8.addEventListener("click", () => {
-      modal8.classList.add("animate-abrir");
-      modal8.classList.remove("animate-cerrar");
-      document.querySelector("body").style.overflowY = "hidden";
-      document.querySelectorAll(".este > div > div").forEach(element => {
-        if (element.classList.contains('animate-abrir')) {
-          element.style.zIndex = "999"
-        } else {
-          element.parentElement.style.filter = "blur(10px)";
-        }
-      })
-    });
-    open9.addEventListener("click", () => {
-      modal9.classList.add("animate-abrir");
-      modal9.classList.remove("animate-cerrar");
-      document.querySelector("body").style.overflowY = "hidden";
-      document.querySelectorAll(".este > div > div").forEach(element => {
-        if (element.classList.contains('animate-abrir')) {
-          element.style.zIndex = "999"
-        } else {
-          element.parentElement.style.filter = "blur(10px)";
-        }
-      })
-    });
-
-
-    // Cerrar el modal
-    closeModalButton.addEventListener("click", () => {
-      // modal.classList.add("hidden");
-      modal.classList.remove("animate-abrir");
-      modal.classList.add("animate-cerrar");
-      document.querySelector("body").style.overflowY = "auto";
-      document.querySelectorAll(".este > div > div").forEach(element => {
-        if (element.classList.contains('animate-cerrar')) {
-          element.style.zIndex = "999";
-        } else {
-          element.parentElement.style.filter = "blur(0px)";
-        }
-      })
-    });
-    closeModalButton2.addEventListener("click", () => {
-      modal2.classList.remove("animate-abrir");
-      modal2.classList.add("animate-cerrar");
-      document.querySelector("body").style.overflowY = "auto";
-      document.querySelectorAll(".este > div > div").forEach(element => {
-        if (element.classList.contains('animate-cerrar')) {
-          element.style.zIndex = "999";
-        } else {
-          element.parentElement.style.filter = "blur(0px)";
-        }
-      })
-    });
-    closeModalButton3.addEventListener("click", () => {
-      modal3.classList.remove("animate-abrir");
-      modal3.classList.add("animate-cerrar");
-      document.querySelector("body").style.overflowY = "auto";
-      document.querySelectorAll(".este > div > div").forEach(element => {
-        if (element.classList.contains('animate-cerrar')) {
-          element.style.zIndex = "999";
-        } else {
-          element.parentElement.style.filter = "blur(0px)";
-        }
-      })
-    });
-    closeModalButton4.addEventListener("click", () => {
-      modal4.classList.remove("animate-abrir");
-      modal4.classList.add("animate-cerrar");
-      document.querySelector("body").style.overflowY = "auto";
-      document.querySelectorAll(".este > div > div").forEach(element => {
-        if (element.classList.contains('animate-cerrar')) {
-          element.style.zIndex = "999";
-        } else {
-          element.parentElement.style.filter = "blur(0px)";
-        }
-      })
-    });
-    closeModalButton5.addEventListener("click", () => {
-      modal5.classList.remove("animate-abrir");
-      modal5.classList.add("animate-cerrar");
-      document.querySelector("body").style.overflowY = "auto";
-      document.querySelectorAll(".este > div > div").forEach(element => {
-        if (element.classList.contains('animate-cerrar')) {
-          element.style.zIndex = "999";
-        } else {
-          element.parentElement.style.filter = "blur(0px)";
-        }
-      })
-    });
-    closeModalButton6.addEventListener("click", () => {
-      modal6.classList.remove("animate-abrir");
-      modal6.classList.add("animate-cerrar");
-      document.querySelector("body").style.overflowY = "auto";
-      document.querySelectorAll(".este > div > div").forEach(element => {
-        if (element.classList.contains('animate-cerrar')) {
-          element.style.zIndex = "999";
-        } else {
-          element.parentElement.style.filter = "blur(0px)";
-        }
-      })
-    });
-    closeModalButton7.addEventListener("click", () => {
-      modal7.classList.remove("animate-abrir");
-      modal7.classList.add("animate-cerrar");
-      document.querySelector("body").style.overflowY = "auto";
-      document.querySelectorAll(".este > div > div").forEach(element => {
-        if (element.classList.contains('animate-cerrar')) {
-          element.style.zIndex = "999";
-        } else {
-          element.parentElement.style.filter = "blur(0px)";
-        }
-      })
-    });
-    closeModalButton8.addEventListener("click", () => {
-      modal8.classList.remove("animate-abrir");
-      modal8.classList.add("animate-cerrar");
-      document.querySelector("body").style.overflowY = "auto";
-      document.querySelectorAll(".este > div > div").forEach(element => {
-        if (element.classList.contains('animate-cerrar')) {
-          element.style.zIndex = "999";
-        } else {
-          element.parentElement.style.filter = "blur(0px)";
-        }
-      })
-    });
-    closeModalButton9.addEventListener("click", () => {
-      modal9.classList.remove("animate-abrir");
-      modal9.classList.add("animate-cerrar");
-      document.querySelector("body").style.overflowY = "auto";
-      document.querySelectorAll(".este > div > div").forEach(element => {
-        if (element.classList.contains('animate-cerrar')) {
-          element.style.zIndex = "999";
-        } else {
-          element.parentElement.style.filter = "blur(0px)";
-        }
-      })
-    });
+    
   </script>
 </body>
 
